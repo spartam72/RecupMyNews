@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/search_query_term_text_input_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/colorBleuDeFrance"
+        android:hint="@string/search_query_term_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="@color/colorXanadu"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/begin_date"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/begin_date_user_choice_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="minimum date"
+                    android:textColor="@color/colorXanadu"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/begin_date_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_arrow_drop_down_grey_24dp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/end_date"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/end_date_user_choice_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="maximum date"
+                    android:textColor="@color/colorXanadu"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/end_date_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_arrow_drop_down_grey_24dp"
+                    android:tag="20"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/check_box_arts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="@color/colorXanadu"
+                android:buttonTint="@color/colorXanadu"
+                android:tag="10"
+                android:text="Arts"
+                android:textColorLink="@color/colorXanadu"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/check_box_business"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:buttonTint="@color/colorXanadu"
+                android:tag="20"
+                android:text="Business"
+                android:textColorLink="@color/colorXanadu"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/check_box_entrepreneurs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorXanadu"
+                android:tag="30"
+                android:text="Entrepreneurs"
+                android:textColorLink="@color/colorXanadu"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/check_box_politics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorXanadu"
+                android:text="Politics"
+                android:textColorLink="@color/colorXanadu" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/check_box_sports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:buttonTint="@color/colorXanadu"
+                android:tag="40"
+                android:text="Sports"
+                android:textColorLink="@color/colorXanadu"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/check_box_travel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:buttonTint="@color/colorXanadu"
+                android:tag="50"
+                android:text="Travel"
+                android:textColorLink="@color/colorXanadu"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_check_one_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp"
+        android:text="Check at least one box" />
+
+    <View
+        android:id="@+id/linear_layout_border"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/switch_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/enable_notif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Enable notifications (once per day)"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <Switch
+            android:id="@+id/notications_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:button="@color/colorXanadu"
+            android:buttonTint="@color/colorXanadu"
+            android:textColorLink="@color/colorXanadu" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/colorBleuDeFrance"
+        android:text="SEARCH"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>

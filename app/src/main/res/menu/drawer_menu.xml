@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/nav_fr1"
+        android:icon="@drawable/ic_top"
+        android:title="@string/top_stories50" />
+
+    <item
+        android:id="@+id/nav_fr2"
+        android:icon="@drawable/ic_popu"
+        android:title="@string/most_popular50" />
+
+    <item
+        android:id="@+id/nav_fr3"
+        android:icon="@drawable/ic_busines"
+        android:title="@string/business50" />
+
+
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/ic_searching"
+        android:title="@string/search25" />
+
+    <item
+        android:id="@+id/nav_notif"
+        android:icon="@drawable/ic_notifica"
+        android:title="@string/notifications9" />
+
+    <item
+        android:id="@+id/nav_help"
+        android:icon="@drawable/ic_help_dark"
+        android:title="@string/help55" />
+
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/ic_about_black"
+        android:title="@string/about15" />
+
+    <item
+        android:id="@+id/nav_close"
+        android:icon="@drawable/ic_close_black_24dp"
+        android:title="@string/exit_app5" />
+
+
+</menu>

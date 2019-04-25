@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"-->
+    <style name="NavigationDrawer.Theme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+    <style name="MyNewsToolbar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- Color of the title text in the Toolbar -->
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColorSecondary">@color/colorWhite</item>
+        <item name="android:actionMenuTextColor">@color/colorAccent</item>
+
+    </style>
+
+    <!-- Date Picker Theme -->
+    <style name="DatePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorXanadu</item>
+        <item name="colorControlActivated">@color/colorXanadu</item>
+        <item name="colorControlHighlight">@color/colorText</item>
+    </style>
+
+    <!-- Dialog Theme -->
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorXanadu</item>
+    </style>
+
+    <!-- MyNews Theme -->
+    <style name="MyNewsTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorXanadu</item>
+        <item name="colorAccent">@color/colorXanadu</item>
+    </style>
+
+    <!-- Rounded button. -->
+    <style name="AppTheme.RoundedCornerMaterialButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/rounded_shape</item>
+    </style>
+
+    <!-- Toolbar theme. -->
+    <style name="ToolBarStyle" parent="NavigationDrawer.Theme">
+        <item name="colorControlNormal">@color/colorWhite</item>
+    </style>
+
+
+</resources>

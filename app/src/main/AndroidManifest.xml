@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.spart.recupmynews">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_lau"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning,InnerclassSeparator">
+        <activity android:name=".Controller.SplashScreen"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Controller.MainActivity"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Controller.AboutActivity"
+            android:parentActivityName=".Controller.MainActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Controller.HelpActivity"
+            android:parentActivityName=".Controller.MainActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Controller.NotificationsActivity"
+            android:parentActivityName=".Controller.MainActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Controller.SearchActivity"
+            android:parentActivityName=".Controller.MainActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Controller.DetailActivityMostPopular"
+            android:parentActivityName=".Controller.DetailActivityMostPopular"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Controller.DetailActivityTopStories"
+            android:parentActivityName=".Controller.DetailActivityTopStories"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Controller.DetailActivityBusiness"
+            android:parentActivityName=".Controller.DetailActivityBusiness"/>
+        <activity android:name=".Controller.SearchResultActivity"
+            android:parentActivityName=".Controller.SearchActivity"/>
+        <activity android:name=".Controller.ArticleDetailsActivity" />
+        <activity android:name=".Controller.NotificationResultActivity"
+            android:parentActivityName=".Controller.SearchActivity"/>
+
+        <receiver android:name=".Controller.AlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

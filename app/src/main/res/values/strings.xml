@@ -1,0 +1,107 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">MyNews</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="a_textview_in_fragment">A TextView in Fragment</string>
+    <string name="go_to_another_activity">Go to another Activity</string>
+    <string name="welcome">Welcome</string>
+    <string name="fragment_1">Fragment 1</string>
+    <string name="fragment_2">Fragment 2</string>
+    <string name="fragment_3">Fragment 3</string>
+    <string name="go_to_other_activity">Go to Other Activity</string>
+    <string name="close_this_app">Close this App</string>
+    <string name="notifications10">Notifications</string>
+    <string name="search_query_term10">Search query term</string>
+    <string name="arts10">Arts</string>
+    <string name="business10">Business</string>
+    <string name="entrepreneurs10">Entrepreneurs</string>
+    <string name="politics10">Politics</string>
+    <string name="sports10">Sports</string>
+    <string name="travel10">Travel</string>
+    <string name="btn1">btn</string>
+    <string name="enable_notifications_once_per_day10">Enable notifications(once per day)</string>
+    <string name="notifications9">Notifications</string>
+    <string name="date_begin5">Date Begin</string>
+    <string name="dd_mm_yyyy5">dd/mm/yyyy</string>
+    <string name="arts5" tools:ignore="ExtraTranslation">Arts</string>
+    <string name="business5">Business</string>
+    <string name="entrepreneurs5">Entrepreneurs</string>
+    <string name="date_end5">Date End</string>
+    <string name="dmy5">dd/mm/yyyy</string>
+    <string name="pol5">Politics</string>
+    <string name="sport5">Sport</string>
+    <string name="trv5">Travel</string>
+    <string name="searc5">SEARCH</string>
+    <string name="searching_articles_please_wait5">Searching articles,please wait..</string>
+    <string name="search15">Search</string>
+    <string name="search_query_term11">Search query term</string>
+    <string name="notifications13">Notifications</string>
+    <string name="help13">Help</string>
+    <string name="about13">About</string>
+    <string name="search11">search</string>
+    <string name="hide_menu11">hide_menu</string>
+    <string name="developed_by_farah_nasser22">Developed by Farah Nasser</string>
+    <string name="co2">Co_Author Meri Dimitri</string>
+    <string name="date_of_publication_february_201922">Date of publication:February 2019</string>
+    <string name="exit2">EXIT</string>
+    <string name="notifications23">Notifications :</string>
+    <string name="search23">Search</string>
+    <string name="about14">About</string>
+    <string name="about15">About</string>
+    <string name="search25">Search</string>
+    <string name="home8">Home</string>
+    <string name="exit_app5">Exit app</string>
+    <string name="search41">Search</string>
+    <string name="business30">Business</string>
+    <string name="most_popular30">Most Popular</string>
+    <string name="top_stories30">Top Stories</string>
+    <string name="top_stories50">Top Stories</string>
+    <string name="most_popular50">Most Popular</string>
+    <string name="business50">Business</string>
+    <string name="help55">Help</string>
+    <string name="stay_informed_wherever_you_are">Stay informed wherever you are !</string>
+    <string name="welcome1">Welcome !</string>
+    <string name="date_of_publication_february_2019">Date of publication:February 2019</string>
+    <string name="www_mynews_com2">www.mynews.com</string>
+    <string name="txt_invalid_statement_for_date_first">*Begin Date must be less than End Date</string>
+    <string name="txt_invalid_statement_for_date_second">*Begin Date and End Date must be less than the date of the day</string>
+    <string name="top2">Top Stories</string>
+    <string name="popu25">Most Popular</string>
+    <string name="busi3">Business</string>
+    <string name="yre">result</string>
+    <string name="search_query_term_hint">Search query term</string>
+    <string name="begin_date">Begin Date</string>
+    <string name="end_date">End Date</string>
+    <string name="search_button_text">SEARCH</string>
+    <string name="check_box_arts">Arts</string>
+    <string name="check_box_politics">Politics</string>
+    <string name="check_box_business">Business</string>
+    <string name="check_box_sports">Sports</string>
+    <string name="check_box_entrepreneurs">Entrepreneurs</string>
+    <string name="check_box_travel">Travel</string>
+    <string name="notifications_text">Enable notifications (once per day)</string>
+    <string name="error_query">You need to choose a query term</string>
+    <string name="error_category">You need to select at least one category</string>
+    <string name="on_error">Check your internet access or fill in all fields(query term, begin date,end date and check boxes)</string>
+    <string name="alert_title">Sorry !</string>
+    <string name="alert_message">There is no result available for your search</string>
+    <string name="button_2_help">OK</string>
+    <string name="set_notif">Notifications Set !</string>
+    <string name="cancel_notif">Notifications Cancel !</string>
+    <string name="title_notif_1">News Articles !</string>
+    <string name="text_notif_1">You have some news for your parameters</string>
+    <string name="title_notif_2">No News !</string>
+    <string name="text_notif_2">There is no news for your parameters</string>
+    <string name="verification_search_field">You must enter a term to search for</string>
+    <string name="verification_checkbox">You must select at least  one category</string>
+    <string name="verification_dates">"Begin Date" must be before "End Date"</string>
+    <string name="no_internet">No internet connection detected </string>
+
+
+
+
+
+
+</resources>
+

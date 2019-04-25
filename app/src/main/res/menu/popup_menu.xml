@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu  xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search_tool_bar"
+        android:icon="@drawable/ic_search_articles"
+        android:title="@string/search11"
+        android:visible="true"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+
+    <item
+        android:id="@+id/notifications_popup"
+        android:title="@string/notifications13"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/help_popup"
+        android:title="@string/help13"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/about_popup"
+        android:title="@string/about13"
+        android:visible="true" />
+</menu>
