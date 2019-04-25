@@ -73,6 +73,11 @@ public class NotificationHelper extends ContextWrapper {
 
     }
 
+    /**
+     * build Notification
+     * @return notification
+     */
+
     public NotificationCompat.Builder getChannelNoArticle() {
 
         RemoteViews collapsedView = new RemoteViews( getPackageName(),R.layout.notification_collapsed );
