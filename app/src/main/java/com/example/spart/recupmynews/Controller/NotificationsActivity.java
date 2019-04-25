@@ -150,8 +150,8 @@ public class NotificationsActivity extends AppCompatActivity implements Compound
         category += ")";
 
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 18);
-        calendar.set( Calendar.MINUTE, 18);
+        calendar.set(Calendar.HOUR_OF_DAY, 20);
+        calendar.set( Calendar.MINUTE, 8);
         calendar.set( Calendar.SECOND, 0 );
         // Puts parameters in intent
         Intent intent = new Intent(getApplicationContext(), AlarmReceiver.class);

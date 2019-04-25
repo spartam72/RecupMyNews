@@ -69,14 +69,6 @@ public class AlarmReceiver extends BroadcastReceiver {
 
                 if(numberOfArticles!= 0){
 
-                  /*  Intent resultIntent = new Intent(context, NotificationResultActivity.class);
-                    PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, resultIntent, PendingIntent.FLAG_IMMUTABLE);
-
-                    NotificationHelper notificationHelper = new NotificationHelper( context );
-                    NotificationCompat.Builder nb = notificationHelper.getChannelArticlesFound(numberOfArticles)
-                            .setContentIntent(pendingIntent);
-                    notificationHelper.getManager().notify( 1, nb.build() );*/
-
                     NotificationHelper notificationHelper = new NotificationHelper( context );
                     NotificationCompat.Builder nb = notificationHelper.getChannelArticlesFound(numberOfArticles);
                     notificationHelper.getManager().notify( 1, nb.build() );
