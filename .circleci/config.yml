@@ -1,1 +1,33 @@
 version: 2
+#
+# Build configuration for Circle CI
+#
+jobs:
+  build:
+    working_directory: ~/code
+    docker:
+    - image: circleci/android:api-28-alpha
+    environment:
+      JVM_OPTS: -Xmx3200m
+    steps:
+    - checkout
+    - restore_cache:
+        key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+
+general:
+  artifacts:
+  - /home/ubuntu/RecupMyNews/app/build/outputs/apk/
+
+machine:
+  environment:
+    ANDROID_HOME: /usr/local/android-sdk-linux
+
+dependencies:
+  override:
+  - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-28.0.0,android-28,extra-google-m2repository,extra-google-google_play_services,extra-android-support
+  - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
+
+test:
+  override:
+  - (./gradlew assemble):
+      timeout: 360
