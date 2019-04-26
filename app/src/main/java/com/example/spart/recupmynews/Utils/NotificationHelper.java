@@ -46,7 +46,7 @@ public class NotificationHelper extends ContextWrapper {
     }
 
     /**
-     * build Notification if News are found
+     * build Notification if News are found !
      * @return notification with number of articles found
      */
     public NotificationCompat.Builder getChannelArticlesFoundYes(int numberOfArticles) {
