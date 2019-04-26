@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -156,8 +157,8 @@ public class NotificationsActivity extends AppCompatActivity implements Compound
         category += ")";
 
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 14);
-        calendar.set( Calendar.MINUTE, 45);
+        calendar.set(Calendar.HOUR_OF_DAY, 21);
+        calendar.set( Calendar.MINUTE, 0);
         calendar.set( Calendar.SECOND, 0 );
         // Pass parameters to the intent
         Intent intent = new Intent(getApplicationContext(), AlarmReceiver.class);
@@ -166,7 +167,11 @@ public class NotificationsActivity extends AppCompatActivity implements Compound
         PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         assert alarmManager != null;
-        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+       // alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+
+        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                SystemClock.elapsedRealtime() +
+                        60 * 1000, pendingIntent);
 
         Toast.makeText( this, R.string.set_notif, Toast.LENGTH_SHORT ).show();
 
