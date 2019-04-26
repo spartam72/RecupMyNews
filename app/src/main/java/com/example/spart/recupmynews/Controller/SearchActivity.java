@@ -26,6 +26,7 @@ import com.example.spart.recupmynews.Api.NewYorkTimesSearchArticles;
 import com.example.spart.recupmynews.MyArticleSearchAPI.ArticleSearchArticles;
 import com.example.spart.recupmynews.MyArticleSearchAPI.ArticleSearchResponse;
 import com.example.spart.recupmynews.R;
+import com.example.spart.recupmynews.Utils.InternetConnectionState;
 import com.google.gson.Gson;
 
 import java.util.Calendar;
@@ -102,6 +103,13 @@ public class SearchActivity extends AppCompatActivity {
 
         switchRelativeLayout.setVisibility( View.GONE );
         borderView.setVisibility( View.GONE );
+
+        if(InternetConnectionState.noInternetAccess( Objects.requireNonNull( getApplicationContext() ))){
+            // If no internet,disable searchButton
+            searchButton.setClickable( false );
+        }else {
+            searchButton.setClickable( true );
+        }
 
 
     }

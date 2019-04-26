@@ -20,6 +20,8 @@ import android.widget.Switch;
 import android.widget.Toast;
 import com.example.spart.recupmynews.R;
 import com.example.spart.recupmynews.Utils.Constant;
+import com.example.spart.recupmynews.Utils.InternetConnectionState;
+
 import java.util.Calendar;
 import java.util.Objects;
 
@@ -60,6 +62,13 @@ public class NotificationsActivity extends AppCompatActivity implements Compound
 
         dateLinearLayout.setVisibility( View.GONE );
         searchButton.setVisibility( View.GONE );
+
+        if( InternetConnectionState.noInternetAccess( Objects.requireNonNull( getApplicationContext() ))){
+            // If no internet,disable searchButton
+            mySwitch.setClickable( false );
+        }else {
+            mySwitch.setClickable( true );
+        }
 
         mSharedPreferences = getPreferences(MODE_PRIVATE);
 
@@ -147,10 +156,10 @@ public class NotificationsActivity extends AppCompatActivity implements Compound
         category += ")";
 
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 20);
-        calendar.set( Calendar.MINUTE, 8);
+        calendar.set(Calendar.HOUR_OF_DAY, 14);
+        calendar.set( Calendar.MINUTE, 45);
         calendar.set( Calendar.SECOND, 0 );
-        // Parameters in intent
+        // Pass parameters to the intent
         Intent intent = new Intent(getApplicationContext(), AlarmReceiver.class);
         intent.putExtra(Constant.QUERY, query);
         intent.putExtra( Constant.CATEGORY, category);

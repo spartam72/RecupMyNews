@@ -58,8 +58,6 @@
         <activity android:name=".Controller.SearchResultActivity"
             android:parentActivityName=".Controller.SearchActivity"/>
         <activity android:name=".Controller.ArticleDetailsActivity" />
-        <activity android:name=".Controller.NotificationResultActivity"
-            android:parentActivityName=".Controller.SearchActivity"/>
 
         <receiver android:name=".Controller.AlarmReceiver">
             <intent-filter>

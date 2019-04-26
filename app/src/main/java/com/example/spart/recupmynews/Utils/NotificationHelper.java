@@ -13,7 +13,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.widget.RemoteViews;
 
-import com.example.spart.recupmynews.Controller.NotificationResultActivity;
+import com.example.spart.recupmynews.Controller.SearchResultActivity;
 import com.example.spart.recupmynews.R;
 
 public class NotificationHelper extends ContextWrapper {
@@ -47,9 +47,9 @@ public class NotificationHelper extends ContextWrapper {
 
     /**
      * build Notification if News are found
-     * @return notification
+     * @return notification with number of articles found
      */
-    public NotificationCompat.Builder getChannelArticlesFound(int numberOfArticles) {
+    public NotificationCompat.Builder getChannelArticlesFoundYes(int numberOfArticles) {
 
             RemoteViews collapsedView = new RemoteViews( getPackageName(), R.layout.notification_collapsed );
             RemoteViews expandedView = new RemoteViews( getPackageName(), R.layout.notification_expanded );
@@ -59,8 +59,10 @@ public class NotificationHelper extends ContextWrapper {
             expandedView.setTextViewText( R.id.text_view_expanded, numberOfArticles + " Article(s) found with your selected settings !" );
             expandedView.setTextViewText( R.id.text_view_expanded_1, "Click on image to see result(s)." );
 
-        Intent resultIntent = new Intent(getBaseContext(), NotificationResultActivity.class);
+        Intent resultIntent = new Intent(getBaseContext(), SearchResultActivity.class);
+        resultIntent.putExtra("NotificationKeyTitle","Notification Results");
         PendingIntent pendingIntent = PendingIntent.getActivity(getBaseContext(), 0, resultIntent, PendingIntent.FLAG_IMMUTABLE);
+
 
             return new NotificationCompat.Builder( getApplicationContext(), channelID ).setColor( ContextCompat.getColor( getApplicationContext(), R.color.colorPistache ) )
                     .setCustomContentView( collapsedView )
@@ -76,10 +78,10 @@ public class NotificationHelper extends ContextWrapper {
 
     /**
      * build Notification if News aren't found
-     * @return notification
+     * @return notification with negative response
      */
 
-    public NotificationCompat.Builder getChannelNoArticle() {
+    public NotificationCompat.Builder getChannelArticlesFoundNo() {
 
         RemoteViews collapsedView = new RemoteViews( getPackageName(),R.layout.notification_collapsed );
         RemoteViews expandedView = new RemoteViews( getPackageName(),R.layout.notification_expanded );

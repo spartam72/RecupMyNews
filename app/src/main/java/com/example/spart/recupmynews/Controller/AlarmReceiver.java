@@ -57,13 +57,13 @@ public class AlarmReceiver extends BroadcastReceiver {
                 if(numberOfArticles!= 0){
 
                     NotificationHelper notificationHelper = new NotificationHelper( context );
-                    NotificationCompat.Builder nb = notificationHelper.getChannelArticlesFound(numberOfArticles);
+                    NotificationCompat.Builder nb = notificationHelper.getChannelArticlesFoundYes(numberOfArticles);
                     notificationHelper.getManager().notify( 1, nb.build() );
 
                 }else {
 
                     NotificationHelper notificationHelper = new NotificationHelper( context );
-                    NotificationCompat.Builder nb = notificationHelper.getChannelNoArticle();
+                    NotificationCompat.Builder nb = notificationHelper.getChannelArticlesFoundNo();
                     notificationHelper.getManager().notify( 1, nb.build() );
 
                 }

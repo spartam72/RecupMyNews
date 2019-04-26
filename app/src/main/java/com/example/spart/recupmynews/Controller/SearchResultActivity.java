@@ -51,10 +51,12 @@ public class SearchResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_result);
 
+        Intent myIntent = getIntent();
+        String NotificationKeyTitle = myIntent.getStringExtra("NotificationKeyTitle");
 
         Toolbar toolbar =  findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
-        Objects.requireNonNull( getSupportActionBar() ).setTitle( "Search Results" );
+        Objects.requireNonNull( getSupportActionBar() ).setTitle(NotificationKeyTitle!= null?NotificationKeyTitle: "Search Results" );
         toolbar.setTitleTextColor(getResources().getColor( R.color.colorWhite ));
         getSupportActionBar().setDisplayHomeAsUpEnabled( true );
 

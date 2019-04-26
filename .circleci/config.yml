@@ -15,7 +15,7 @@ jobs:
         - ~/.gradle
         key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
     - store_artifacts:
-        path: app\src\test\java\com\example\spart\recupmynews
+        path: app/build/reports
         destination: reports
     - store_test_results:
         path: app/build/test-results
