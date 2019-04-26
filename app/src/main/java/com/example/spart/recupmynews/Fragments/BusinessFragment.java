@@ -54,7 +54,7 @@ public class BusinessFragment extends Fragment {
             noInternet.setVisibility(View.VISIBLE);
             mRecyclerView.setVisibility(View.GONE);
         }else {
-            // Only display Articles
+            //  display Articles
             callApi();
         }
 

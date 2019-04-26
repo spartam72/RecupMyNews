@@ -18,11 +18,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.Toast;
-
-
 import com.example.spart.recupmynews.R;
 import com.example.spart.recupmynews.Utils.Constant;
-
 import java.util.Calendar;
 import java.util.Objects;
 
@@ -95,7 +92,7 @@ public class NotificationsActivity extends AppCompatActivity implements Compound
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
         if(buttonView.getId() == R.id.notications_switch){
-            // Click on the switch
+            // Click on switch button
             if(isChecked){
                 // User has enabled notifications
                 if(checkAllParameters(getBaseContext(), searchQueryTerm,checkBoxArts,checkBoxBusiness,checkBoxPolitics,checkBoxTravel,checkBoxSports,checkBoxEntrepreneurs)){
@@ -110,7 +107,7 @@ public class NotificationsActivity extends AppCompatActivity implements Compound
                 Toast.makeText( this,getApplicationContext().getResources().getString(R.string.cancel_notif), Toast.LENGTH_SHORT).show();
             }
         }else {
-            // Click on a checkbox: the user changes the criteria, disable the alarm
+            // Click on a checkbox: user changes the criteria, disable the alarm
             cancelAlarm();
         }
 
@@ -153,7 +150,7 @@ public class NotificationsActivity extends AppCompatActivity implements Compound
         calendar.set(Calendar.HOUR_OF_DAY, 20);
         calendar.set( Calendar.MINUTE, 8);
         calendar.set( Calendar.SECOND, 0 );
-        // Puts parameters in intent
+        // Parameters in intent
         Intent intent = new Intent(getApplicationContext(), AlarmReceiver.class);
         intent.putExtra(Constant.QUERY, query);
         intent.putExtra( Constant.CATEGORY, category);

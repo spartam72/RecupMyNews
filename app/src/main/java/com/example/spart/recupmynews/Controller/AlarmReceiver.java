@@ -1,33 +1,22 @@
 package com.example.spart.recupmynews.Controller;
 
 import android.annotation.SuppressLint;
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.media.RingtoneManager;
 import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
-import android.support.v4.content.ContextCompat;
-import android.widget.RemoteViews;
-
 import com.example.spart.recupmynews.Api.NewYorkTimesSearchArticles;
 import com.example.spart.recupmynews.MyArticleSearchAPI.ArticleSearchArticles;
 import com.example.spart.recupmynews.MyArticleSearchAPI.ArticleSearchResponse;
-import com.example.spart.recupmynews.R;
 import com.example.spart.recupmynews.Utils.NotificationHelper;
 import com.google.gson.Gson;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Objects;
-
 import io.reactivex.disposables.Disposable;
 import io.reactivex.observers.DisposableObserver;
-
-
 
 public class AlarmReceiver extends BroadcastReceiver {
 
@@ -36,8 +25,6 @@ public class AlarmReceiver extends BroadcastReceiver {
     private Disposable mDisposable;
     private SharedPreferences mPreferences;
     int numberOfArticles;
-
-    NotificationResultActivity notificationResultActivity;
 
     @SuppressLint("UnsafeProtectedBroadcastReceiver")
     @Override

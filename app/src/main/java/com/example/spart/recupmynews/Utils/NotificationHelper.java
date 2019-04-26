@@ -16,9 +16,6 @@ import android.widget.RemoteViews;
 import com.example.spart.recupmynews.Controller.NotificationResultActivity;
 import com.example.spart.recupmynews.R;
 
-import static com.example.spart.recupmynews.R.color.colorAccent;
-
-
 public class NotificationHelper extends ContextWrapper {
 
 
@@ -48,6 +45,10 @@ public class NotificationHelper extends ContextWrapper {
         return mManager;
     }
 
+    /**
+     * build Notification if News are found
+     * @return notification
+     */
     public NotificationCompat.Builder getChannelArticlesFound(int numberOfArticles) {
 
             RemoteViews collapsedView = new RemoteViews( getPackageName(), R.layout.notification_collapsed );
@@ -74,7 +75,7 @@ public class NotificationHelper extends ContextWrapper {
     }
 
     /**
-     * build Notification
+     * build Notification if News aren't found
      * @return notification
      */
 
