@@ -1,4 +1,8 @@
 version: 2
+#
+# Build configuration for Circle CI
+#
+email: false
 jobs:
   build:
     working_directory: ~/code
@@ -10,18 +14,21 @@ jobs:
     - checkout
     - restore_cache:
         key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-    - run:
-        name: Download Dependencies
-        command: ./gradlew androidDependencies
-    - save_cache:
-        paths:
-        - ~/.gradle
-        key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-    - run:
-        name: Run Tests
-        command: ./gradlew lint test
-    - store_artifacts:
-        path: app/build/reports
-        destination: reports
-    - store_test_results:
-        path: app/build/test-results
+
+general:
+  artifacts:
+  - /home/ubuntu/RecupMyNews/app/build/outputs/apk/
+
+machine:
+  environment:
+    ANDROID_HOME: /usr/local/android-sdk-linux
+
+dependencies:
+  override:
+  - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-28.0.0,android-28,extra-google-m2repository,extra-google-google_play_services,extra-android-support
+  - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
+
+test:
+  override:
+  - (./gradlew assemble):
+      timeout: 360
