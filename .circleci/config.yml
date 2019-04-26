@@ -2,6 +2,7 @@ version: 2
 #
 # Build configuration for Circle CI
 #
+email: false
 jobs:
   build:
     working_directory: ~/code
