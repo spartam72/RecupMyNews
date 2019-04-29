@@ -70,7 +70,7 @@ public class TopStoriesAdapter extends RecyclerView.Adapter<TopStoriesAdapter.My
 
 
 
-        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorJauneFonce) );
+        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorIceBerg) );
 
         holder.section.setText( results.get( position ).getSection() );
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));

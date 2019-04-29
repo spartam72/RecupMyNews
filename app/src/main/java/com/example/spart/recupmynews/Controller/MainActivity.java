@@ -76,8 +76,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 viewPager.setCurrentItem( tab.getPosition() );
 
                 if (tab.getPosition() == 0) {
-                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorAutreJaune));
-                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAutreJaune));
+                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorIceBerg));
+                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorIceBerg));
                 } else if (tab.getPosition() == 1) {
                     toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkOther));
                     tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkOther));

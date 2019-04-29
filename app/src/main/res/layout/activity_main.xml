@@ -27,7 +27,7 @@
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorAutreJaune"
+            android:background="@color/colorIceBerg"
             app:tabGravity="fill"
             app:tabIndicatorColor="@color/colorBlack"
             app:tabMode="fixed"
@@ -63,7 +63,7 @@
         android:fitsSystemWindows="true"
         android:theme="@style/NavigationDrawer.Theme"
         app:headerLayout="@layout/activity_main_nav_header"
-        app:itemIconTint="@color/colorJauneFonce"
+        app:itemIconTint="@color/colorIceBerg"
         app:itemTextColor="@color/colorBlack"
         app:menu="@menu/drawer_menu" />
 

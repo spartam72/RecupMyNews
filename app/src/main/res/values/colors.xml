@@ -23,10 +23,10 @@
     <color name="colorMainTheme">#11AAC4</color>
     <color name="colorText">#D0D0D0</color>
     <color name="vert">#03C03C</color>
-    <color name="colorJauneFonce">#B5A642</color>
-    <color name="colorAutreJaune">#CDDC39</color>
-    <color name="colorPrimaryOther">#795548</color>
-    <color name="colorPrimaryDarkOther">#5D4037</color>
+    <color name="colorJauneFonce">#FFC107</color>
+    <color name="colorAutreJaune">#FFC107</color>
+    <color name="colorPrimaryOther">#009688</color>
+    <color name="colorPrimaryDarkOther">#FFA000</color>
 
 
 </resources>

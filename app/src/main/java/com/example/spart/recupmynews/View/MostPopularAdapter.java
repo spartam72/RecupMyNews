@@ -71,7 +71,7 @@ public class MostPopularAdapter extends RecyclerView.Adapter<MostPopularAdapter.
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
-        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorAccent) );
+        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorPrimaryDarkOther) );
 
         holder.section.setText( results.get( position ).getSection() );
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
