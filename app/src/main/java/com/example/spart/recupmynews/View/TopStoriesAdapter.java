@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -53,23 +54,23 @@ public class TopStoriesAdapter extends RecyclerView.Adapter<TopStoriesAdapter.My
             mPublishedDate= view.findViewById( R.id.published_date );
             mImageUrl = view.findViewById( R.id.image_url );
             section = view.findViewById( R.id.my_section );
-
-
         }
     }
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final View itemView = LayoutInflater.from(parent.getContext())
                 .inflate( R.layout.article_item_categories,parent, false);
-
-
         return new MyViewHolder(itemView);
     }
 
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
+
+
+
+        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorJauneFonce) );
 
         holder.section.setText( results.get( position ).getSection() );
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
@@ -80,6 +81,7 @@ public class TopStoriesAdapter extends RecyclerView.Adapter<TopStoriesAdapter.My
             Glide.with( context ).applyDefaultRequestOptions( new RequestOptions().placeholder( R.drawable.ic_news_logo )
                     .error( R.drawable.ic_news_logo ) )
                     .load( results.get( position ).getMultimedia().get( 0 ).getUrl() )
+                    .centerInside().fitCenter()
                     .apply( RequestOptions.centerCropTransform())
                     .into( holder.mImageUrl );
 

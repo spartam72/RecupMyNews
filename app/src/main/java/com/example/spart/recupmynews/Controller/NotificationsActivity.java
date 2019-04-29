@@ -47,7 +47,8 @@ public class NotificationsActivity extends AppCompatActivity implements Compound
         Toolbar toolbar = findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
         Objects.requireNonNull( getSupportActionBar() ).setTitle( "Notifications" );
-        toolbar.setTitleTextColor( getResources().getColor( R.color.colorWhite ) );
+      //  toolbar.setTitleTextColor( getResources().getColor( R.color.colorWhite ) );
+        toolbar.setBackgroundColor( getResources().getColor( R.color.colorJauneFonce ));
         getSupportActionBar().setDisplayHomeAsUpEnabled( true );
 
          searchQueryTerm = findViewById( R.id.search_query_term_text_input_edit_text );
@@ -171,7 +172,7 @@ public class NotificationsActivity extends AppCompatActivity implements Compound
 
         alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,
                 SystemClock.elapsedRealtime() +
-                        60 * 1000, pendingIntent);
+                        60 * 1000 , pendingIntent);
 
         Toast.makeText( this, R.string.set_notif, Toast.LENGTH_SHORT ).show();
 

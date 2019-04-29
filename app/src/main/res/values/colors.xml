@@ -2,25 +2,31 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D8241B</color>
-    <color name="colorOrange">#E4D00A</color>
+    <color name="colorAccent">#CB410B</color>
+    <color name="colorJaune">#E4D00A</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorNavyBlue">#000080</color>
     <color name="colorBlack">#000000</color>
     <color name="colorDarkCandyAppleRed" tools:ignore="MissingDefaultResource">#800000</color>
     <color name="colorPistache">#85BB65</color>
-    <color name="colorOranger">#CC5500</color>
+    <color name="colorOranger">#738678</color>
     <color name="colorBrown">#3D2B1F</color>
     <color name="colorDesert">#C19A6B</color>
-    <color name="colorPastelBrown">#4C4641</color>
-    <color name="colorMyBlue_">#3949AB</color>
+    <color name="colorPastelBrown">#414833</color>
+    <color name="colorIceBerg">#5D3954</color>
     <color name="colorOrangeLight">#ff7d47</color>
-    <color name="colorWelcome">#454545</color>
+    <color name="colorWelcome">#696969</color>
     <color name="colorYellow">#E4D00A</color>
     <color name="colorXanadu" >#738678</color>
     <color name="colorMyGray">#321414</color>
     <color name="colorBleuDeFrance" >#738678</color>
     <color name="colorMainTheme">#11AAC4</color>
     <color name="colorText">#D0D0D0</color>
+    <color name="vert">#03C03C</color>
+    <color name="colorJauneFonce">#B5A642</color>
+    <color name="colorAutreJaune">#CDDC39</color>
+    <color name="colorPrimaryOther">#795548</color>
+    <color name="colorPrimaryDarkOther">#5D4037</color>
+
 
 </resources>

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+    android:background="@color/colorWhite"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorBleuDeFrance"
+        android:background="@color/colorJauneFonce"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -31,20 +32,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MyNews application for Android brings the award-winning journalism of The New York Times to your Android device. The app has been specifically designed for browsing and navigating articles, features and video on the Android platform. Get it for free from the Google Play Store and start enjoying MyNews on your Android smartphone and tablet. "
-            android:textColor="@android:color/black" />
+            android:textColor="@color/colorBlack" />
 
 
     </android.support.v4.widget.NestedScrollView>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="120dp" />
 
     <ImageView
         android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="281dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="110dp"
+        app:srcCompat="@drawable/news_wallpaper"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_news_logo" />
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="www.mynews.com"
+        android:textColor="@color/colorBlack" />
 
 </LinearLayout>

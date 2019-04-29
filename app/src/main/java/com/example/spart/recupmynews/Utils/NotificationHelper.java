@@ -54,6 +54,7 @@ public class NotificationHelper extends ContextWrapper {
             RemoteViews collapsedView = new RemoteViews( getPackageName(), R.layout.notification_collapsed );
             RemoteViews expandedView = new RemoteViews( getPackageName(), R.layout.notification_expanded );
 
+
             collapsedView.setTextViewText( R.id.text_view_collapsed_1, "Hello, dear reader!" );
             collapsedView.setTextViewText( R.id.text_view_collapsed_2, numberOfArticles + " Article(s) found with your selected settings !" );
             expandedView.setTextViewText( R.id.text_view_expanded, numberOfArticles + " Article(s) found with your selected settings !" );
@@ -64,7 +65,8 @@ public class NotificationHelper extends ContextWrapper {
         PendingIntent pendingIntent = PendingIntent.getActivity(getBaseContext(), 0, resultIntent, PendingIntent.FLAG_IMMUTABLE);
 
 
-            return new NotificationCompat.Builder( getApplicationContext(), channelID ).setColor( ContextCompat.getColor( getApplicationContext(), R.color.colorPistache ) )
+            return new NotificationCompat.Builder( getApplicationContext(), channelID )
+                    .setColor( ContextCompat.getColor( getApplicationContext(), R.color.colorJauneFonce ) )
                     .setCustomContentView( collapsedView )
                     .setCustomBigContentView( expandedView )
                     .setStyle( new NotificationCompat.DecoratedCustomViewStyle() )
@@ -83,21 +85,30 @@ public class NotificationHelper extends ContextWrapper {
 
     public NotificationCompat.Builder getChannelArticlesFoundNo() {
 
-        RemoteViews collapsedView = new RemoteViews( getPackageName(),R.layout.notification_collapsed );
+     /*   RemoteViews collapsedView = new RemoteViews( getPackageName(),R.layout.notification_collapsed );
         RemoteViews expandedView = new RemoteViews( getPackageName(),R.layout.notification_expanded );
 
         collapsedView.setTextViewText( R.id.text_view_collapsed_1,"Hello, dear reader!" );
         collapsedView.setTextViewText( R.id.text_view_collapsed_2,"Sorry, any article found with your selected settings ." );
         expandedView.setTextViewText(  R.id.text_view_expanded,"Sorry, any article found with your selected settings ." );
+        expandedView.setTextColor(  R.id.text_view_expanded,getColor( R.color.colorAccent ) );
         expandedView.setTextViewText( R.id.text_view_expanded_1,"See you soon !"  );
 
-        return new NotificationCompat.Builder( getApplicationContext(), channelID ).setColor( ContextCompat.getColor( getApplicationContext(), R.color.colorAccent ) )
+        return new NotificationCompat.Builder( getApplicationContext(), channelID )
                 .setCustomContentView( collapsedView )
                 .setCustomBigContentView( expandedView )
                 .setStyle( new NotificationCompat.DecoratedCustomViewStyle() )
                 .setPriority( NotificationCompat.PRIORITY_HIGH )
                 .setSound( RingtoneManager.getDefaultUri( RingtoneManager.TYPE_ALARM ) )
                 .setAutoCancel( true )
+                .setSmallIcon( R.drawable.ic_news_logo );  */
+
+        return new NotificationCompat.Builder( getApplicationContext(), channelID )
+                .setColor( ContextCompat.getColor( getApplicationContext(), R.color.colorJauneFonce ) )
+                .setContentTitle( "Sorry, any article found with your selected settings ."  )
+                .setContentText( "See you soon !" )
+                .setPriority( NotificationCompat.PRIORITY_HIGH )
+                .setSound( RingtoneManager.getDefaultUri( RingtoneManager.TYPE_ALARM ) )
                 .setSmallIcon( R.drawable.ic_news_logo );
     }
 }

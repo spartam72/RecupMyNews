@@ -11,7 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorXanadu"
+        android:background="@color/colorJauneFonce"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -29,7 +29,7 @@
         android:paddingTop="5dp"
         android:paddingRight="10dp"
         android:text="@string/developed_by_farah_nasser22"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorBlack"
         android:textSize="12sp" />
 
     <TextView
@@ -40,7 +40,7 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="Google Playstore publication : February_2019"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorBlack"
         android:textSize="12sp" />
 
     <LinearLayout
@@ -57,13 +57,14 @@
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="160dp"
+            android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            app:srcCompat="@drawable/ic_news_logo" />
+            app:srcCompat="@drawable/news_wallpaper"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView2"
@@ -84,7 +85,7 @@
             android:layout_weight="1"
             android:gravity="bottom|center_horizontal"
             android:text="www.mynews.com"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorBlack"
             android:textSize="12sp"
             tools:ignore="NestedWeights,ObsoleteLayoutParam,SmallSp" />
 

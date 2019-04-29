@@ -79,7 +79,8 @@ public class SearchActivity extends AppCompatActivity {
         Toolbar toolbar =  findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
         Objects.requireNonNull( getSupportActionBar() ).setTitle( "Searh Articles" );
-        toolbar.setTitleTextColor(getResources().getColor( R.color.colorWhite ));
+       // toolbar.setTitleTextColor(getResources().getColor( R.color.colorWhite ));
+        toolbar.setBackgroundColor( getResources().getColor( R.color.colorJauneFonce));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         searchQueryTerm = findViewById( R.id.search_query_term_text_input_edit_text );

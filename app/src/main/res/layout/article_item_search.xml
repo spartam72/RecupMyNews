@@ -4,27 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="120dp"
-    android:layout_margin="8dp">
+    android:layout_margin="5dp">
 
     <LinearLayout
-        android:layout_width="120dp"
+        android:layout_width="110dp"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/fragment_recycle_item_image"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_gravity="center|center_horizontal|center_vertical"
-            android:layout_margin="10dp"
+            android:layout_margin="6dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_news_logo" />
+            android:foregroundGravity="clip_horizontal"
+            android:padding="6dp"
+            app:srcCompat="@drawable/ic_news_logo"
+            tools:ignore="ContentDescription" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginStart="118dp"
+        android:layout_marginStart="110dp"
         android:background="@color/colorWhite"
         android:orientation="vertical">
 
@@ -32,51 +35,55 @@
             android:id="@+id/fragment_recycle_item_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:maxLines="1"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
             android:text="section"
-            android:textColor="@color/colorBleuDeFrance"
-            android:textSize="13sp"
+            android:textColor="@color/colorJauneFonce"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/fragment_recycle_item_headline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:maxLines="2"
-            android:text="headline"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text="headline mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
             android:textColor="@color/colorBlack"
-            android:textSize="13sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/fragment_recycle_item_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:maxLines="3"
-            android:text="title"
+            android:text="TextView"
             android:textColor="@color/colorBlack"
-            android:textSize="12sp"
-            tools:ignore="SmallSp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/fragment_recycle_item_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="0"
+            android:gravity="end"
             android:text="20/03/2019"
-            android:textColor="@color/colorXanadu"
+            android:textColor="@color/colorBlack"
             android:textSize="12sp"
             android:textStyle="bold"
             tools:ignore="SmallSp" />
@@ -84,7 +91,8 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="@color/colorBleuDeFrance" />
+            android:layout_marginStart="5dp"
+            android:background="@color/colorWelcome" />
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

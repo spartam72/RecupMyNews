@@ -11,12 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/colorBleuDeFrance"
+        android:backgroundTint="@color/colorJauneFonce"
         android:hint="@string/search_query_term_hint"
         android:importantForAutofill="no"
         android:inputType="text"
-        android:textColor="@color/colorXanadu"
-        android:textStyle="bold" />
+        android:textColor="@color/colorBlack"
+        android:textColorLink="@color/colorOranger"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:id="@+id/linear_layout_date"
@@ -36,8 +37,10 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/begin_date_button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
                 android:text="@string/begin_date"
                 android:textSize="16sp" />
 
@@ -51,7 +54,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text="minimum date"
-                    android:textColor="@color/colorXanadu"
+                    android:textColor="@color/colorBlack"
+                    android:textColorLink="@color/colorAccent"
                     android:textSize="17sp" />
 
                 <ImageView
@@ -67,7 +71,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@color/colorJauneFonce" />
 
         </LinearLayout>
 
@@ -95,7 +99,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:text="maximum date"
-                    android:textColor="@color/colorXanadu"
+                    android:textColor="@color/colorBlack"
+                    android:textColorLink="@color/colorAccent"
                     android:textSize="17sp" />
 
                 <ImageView
@@ -109,10 +114,10 @@
 
             </RelativeLayout>
 
-            <LinearLayout
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@color/colorJauneFonce" />
 
         </LinearLayout>
 
@@ -138,11 +143,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:backgroundTint="@color/colorXanadu"
-                android:buttonTint="@color/colorXanadu"
+                android:backgroundTint="@color/colorAccent"
+                android:buttonTint="@color/colorJauneFonce"
                 android:tag="10"
                 android:text="Arts"
-                android:textColorLink="@color/colorXanadu"
+                android:textColorLink="@color/colorAccent"
                 android:textSize="16sp" />
 
             <android.support.v7.widget.AppCompatCheckBox
@@ -150,20 +155,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:buttonTint="@color/colorXanadu"
+                android:buttonTint="@color/colorJauneFonce"
                 android:tag="20"
                 android:text="Business"
-                android:textColorLink="@color/colorXanadu"
+                android:textColorLink="@color/colorAccent"
                 android:textSize="16sp" />
 
             <android.support.v7.widget.AppCompatCheckBox
                 android:id="@+id/check_box_entrepreneurs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/colorXanadu"
+                android:buttonTint="@color/colorJauneFonce"
                 android:tag="30"
                 android:text="Entrepreneurs"
-                android:textColorLink="@color/colorXanadu"
+                android:textColorLink="@color/colorAccent"
                 android:textSize="16sp" />
 
         </LinearLayout>
@@ -178,19 +183,20 @@
                 android:id="@+id/check_box_politics"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/colorXanadu"
+                android:backgroundTint="@color/colorAccent"
+                android:buttonTint="@color/colorJauneFonce"
                 android:text="Politics"
-                android:textColorLink="@color/colorXanadu" />
+                android:textColorLink="@color/colorAccent" />
 
             <android.support.v7.widget.AppCompatCheckBox
                 android:id="@+id/check_box_sports"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:buttonTint="@color/colorXanadu"
+                android:buttonTint="@color/colorJauneFonce"
                 android:tag="40"
                 android:text="Sports"
-                android:textColorLink="@color/colorXanadu"
+                android:textColorLink="@color/colorAccent"
                 android:textSize="16sp" />
 
             <android.support.v7.widget.AppCompatCheckBox
@@ -198,10 +204,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:buttonTint="@color/colorXanadu"
+                android:buttonTint="@color/colorJauneFonce"
                 android:tag="50"
                 android:text="Travel"
-                android:textColorLink="@color/colorXanadu"
+                android:textColorLink="@color/colorAccent"
                 android:textSize="16sp" />
 
         </LinearLayout>
@@ -225,7 +231,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="20dp"
-        android:background="@android:color/darker_gray" />
+        android:background="@color/colorJauneFonce" />
 
     <RelativeLayout
         android:id="@+id/switch_relative_layout"
@@ -249,9 +255,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:button="@color/colorXanadu"
-            android:buttonTint="@color/colorXanadu"
-            android:textColorLink="@color/colorXanadu" />
+            android:backgroundTint="@color/colorAccent"
+            android:button="@color/colorAccent"
+            android:buttonTint="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
+            android:textColorLink="@color/colorAccent" />
 
     </RelativeLayout>
 
@@ -262,7 +270,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:background="@color/colorBleuDeFrance"
+        android:background="@color/colorJauneFonce"
         android:text="SEARCH"
         android:textColor="@android:color/white"
         android:textSize="20sp" />

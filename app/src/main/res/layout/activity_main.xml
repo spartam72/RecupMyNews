@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
     android:fitsSystemWindows="true"
-    tools:context="com.example.spart.mynews.Controller.MainActivity"
+    tools:context="com.example.spart.recupmynews.Controller.MainActivity"
     tools:openDrawer="start">
 
     <LinearLayout
@@ -27,7 +27,7 @@
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorBleuDeFrance"
+            android:background="@color/colorAutreJaune"
             app:tabGravity="fill"
             app:tabIndicatorColor="@color/colorBlack"
             app:tabMode="fixed"
@@ -40,7 +40,8 @@
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/tablayout">
+            android:layout_below="@+id/tablayout"
+            tools:ignore="ObsoleteLayoutParam">
 
         </android.support.v4.view.ViewPager>
 
@@ -58,13 +59,12 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@android:color/white"
+        android:background="@color/colorWhite"
         android:fitsSystemWindows="true"
         android:theme="@style/NavigationDrawer.Theme"
         app:headerLayout="@layout/activity_main_nav_header"
-        app:itemIconTint="@color/colorBleuDeFrance"
+        app:itemIconTint="@color/colorJauneFonce"
         app:itemTextColor="@color/colorBlack"
-
         app:menu="@menu/drawer_menu" />
 
 

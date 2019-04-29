@@ -1,5 +1,7 @@
 package com.example.spart.recupmynews.View;
 
+import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,6 +17,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ArticlesViewHolder extends  RecyclerView.ViewHolder {
+
     @BindView(R.id.fragment_recycle_item_image)
     ImageView image;
     @BindView(R.id.fragment_recycle_item_category)
@@ -23,7 +26,6 @@ public class ArticlesViewHolder extends  RecyclerView.ViewHolder {
     TextView date;
     @BindView(R.id.fragment_recycle_item_title)
     TextView title;
-
     @BindView(R.id.fragment_recycle_item_headline)
     TextView headline;
 
@@ -37,7 +39,10 @@ public class ArticlesViewHolder extends  RecyclerView.ViewHolder {
 
     public void updateWithArticleSearch(ArticleSearchArticles articleSearchArticle, RequestManager glide){
         try{
-            glide.load("https://static01.nyt.com/" + articleSearchArticle.getMultimedia().get(2).getUrl()).into(image);
+            glide.load("https://static01.nyt.com/" + articleSearchArticle.getMultimedia().get(2).getUrl())
+                    .centerInside().fitCenter().fitCenter()
+                    .into(image)
+                    ;
         } catch (IndexOutOfBoundsException e){
             e.printStackTrace();
         }

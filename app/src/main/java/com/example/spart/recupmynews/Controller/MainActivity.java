@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ViewPager viewPager;
     private DrawerLayout drawer;
     private final String[] pageTitle = {"TOP STORIES", "MOST POPULAR", "BUSINESS"};
+    Toolbar toolbar;
+    TabLayout tabLayout;
+
 
 
     @Override
@@ -31,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView( R.layout.activity_main );
 
         viewPager = findViewById( R.id.view_pager );
-        Toolbar toolbar = findViewById( R.id.toolbar );
+        toolbar = findViewById( R.id.toolbar );
         drawer = findViewById( R.id.drawerLayout );
 
         setSupportActionBar( toolbar );
@@ -45,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         //setting Tab layout (number of Tabs = number of ViewPager pages)
-        TabLayout tabLayout = findViewById( R.id.tab_layout );
+        tabLayout = findViewById( R.id.tab_layout );
         for (int i = 0; i < 3; i++) {
             tabLayout.addTab( tabLayout.newTab().setText( pageTitle[i] ) );
         }
@@ -70,6 +74,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem( tab.getPosition() );
+
+                if (tab.getPosition() == 0) {
+                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorAutreJaune));
+                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAutreJaune));
+                } else if (tab.getPosition() == 1) {
+                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkOther));
+                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkOther));
+                } else {
+                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryOther ));
+                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryOther ));
+                }
             }
 
             @Override

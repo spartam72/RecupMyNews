@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -58,7 +59,7 @@ public class MostPopularAdapter extends RecyclerView.Adapter<MostPopularAdapter.
     }
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final View itemView = LayoutInflater.from(parent.getContext())
                 .inflate( R.layout.article_item_categories,parent, false);
 
@@ -70,6 +71,8 @@ public class MostPopularAdapter extends RecyclerView.Adapter<MostPopularAdapter.
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
+        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorAccent) );
+
         holder.section.setText( results.get( position ).getSection() );
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
         holder.mTitle.setText(results.get( position ).getTitle() );
@@ -79,6 +82,8 @@ public class MostPopularAdapter extends RecyclerView.Adapter<MostPopularAdapter.
             Glide.with( context ).applyDefaultRequestOptions( new RequestOptions().placeholder( R.drawable.ic_news_logo )
                     .error( R.drawable.ic_news_logo ) )
                     .load( results.get( position ).getMedia().get( 0 ).getMediaMetadata().get( 0 ).getUrl() )
+                    .centerInside()
+                    .apply( RequestOptions.centerCropTransform())
                     .into( holder.mImageUrl );
 
         }catch (IndexOutOfBoundsException e){
