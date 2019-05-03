@@ -72,7 +72,7 @@ public class BusinessAdapter extends RecyclerView.Adapter<BusinessAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
-        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorPrimaryOther) );
+        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorNavyBlue) );
 
         holder.section.setText( results.get( position ).getSection() );
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
@@ -82,8 +82,8 @@ public class BusinessAdapter extends RecyclerView.Adapter<BusinessAdapter.MyView
         try {
             Glide.with( context ).applyDefaultRequestOptions( new RequestOptions().placeholder( R.drawable.ic_news_logo )
                     .error( R.drawable.ic_news_logo ) )
-                    .load( results.get( position ).getMultimedia().get( 0 ).getUrl() )
-                    .centerInside().fitCenter()
+                    .load( results.get( position ).getMultimedia().get( 1 ).getUrl() )
+                    .centerCrop()
                     .apply( RequestOptions.centerCropTransform())
                     .into( holder.mImageUrl );
 

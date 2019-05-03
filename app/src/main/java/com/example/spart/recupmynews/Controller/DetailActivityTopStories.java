@@ -24,7 +24,6 @@ public class DetailActivityTopStories extends AppCompatActivity {
         Toolbar toolbar =  findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
         Objects.requireNonNull( getSupportActionBar() ).setTitle( "Details from TopStories Article" );
-        toolbar.setTitleTextColor(getResources().getColor( R.color.colorWhite ));
         getSupportActionBar().setDisplayHomeAsUpEnabled( true );
 
         WebView webViewDetail = findViewById( R.id.webViewDescription );

@@ -81,6 +81,7 @@ before_script:
 - chmod +x gradlew
 # Create and start the emulator
 - sdkmanager "system-images;android-"$EMULATOR_API_LEVEL";google_apis;armeabi-v7a"
+- android list targets
 - echo no | avdmanager -v create avd -f -n test -k "system-images;android-"$EMULATOR_API_LEVEL";google_apis;armeabi-v7a"
 - $ANDROID_HOME/emulator/emulator -avd test -no-audio -no-window &
 

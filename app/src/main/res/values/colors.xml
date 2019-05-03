@@ -2,10 +2,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#CB410B</color>
+    <color name="colorAccent">#DAA520</color>
     <color name="colorJaune">#E4D00A</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="colorNavyBlue">#000080</color>
+    <color name="colorNavyBlue">#4682B4</color>
     <color name="colorBlack">#000000</color>
     <color name="colorDarkCandyAppleRed" tools:ignore="MissingDefaultResource">#800000</color>
     <color name="colorPistache">#85BB65</color>
@@ -15,18 +15,19 @@
     <color name="colorPastelBrown">#414833</color>
     <color name="colorIceBerg">#5D3954</color>
     <color name="colorOrangeLight">#ff7d47</color>
-    <color name="colorWelcome">#696969</color>
+    <color name="colorWelcome">#738678</color>
     <color name="colorYellow">#E4D00A</color>
-    <color name="colorXanadu" >#738678</color>
+    <color name="colorXanadu" >#CE1620</color>
     <color name="colorMyGray">#321414</color>
     <color name="colorBleuDeFrance" >#738678</color>
-    <color name="colorMainTheme">#11AAC4</color>
+    <color name="colorMainTheme">#555555</color>
     <color name="colorText">#D0D0D0</color>
     <color name="vert">#03C03C</color>
-    <color name="colorJauneFonce">#FFC107</color>
+    <color name="colorJauneFonce">#FF1C00</color>
     <color name="colorAutreJaune">#FFC107</color>
     <color name="colorPrimaryOther">#009688</color>
     <color name="colorPrimaryDarkOther">#FFA000</color>
+    <color name="colorSport">#138808</color>
 
 
 </resources>

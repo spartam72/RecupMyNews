@@ -14,9 +14,13 @@
 
     <item
         android:id="@+id/nav_fr3"
+        android:icon="@drawable/ic_fitness"
+        android:title="@string/sports51" />
+
+    <item
+        android:id="@+id/nav_fr4"
         android:icon="@drawable/ic_busines"
         android:title="@string/business50" />
-
 
     <item
         android:id="@+id/nav_search"

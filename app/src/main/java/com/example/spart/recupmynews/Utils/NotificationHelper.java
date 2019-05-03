@@ -56,7 +56,7 @@ public class NotificationHelper extends ContextWrapper {
 
 
             collapsedView.setTextViewText( R.id.text_view_collapsed_1, "Hello, dear reader!" );
-            collapsedView.setTextViewText( R.id.text_view_collapsed_2, numberOfArticles + " Article(s) found with your selected settings !" );
+            collapsedView.setTextViewText( R.id.text_view_collapsed_2, numberOfArticles + " Article(s) found with your selected criteria !" );
             expandedView.setTextViewText( R.id.text_view_expanded, numberOfArticles + " Article(s) found with your selected settings !" );
             expandedView.setTextViewText( R.id.text_view_expanded_1, "Click on image to see result(s)." );
 
@@ -66,7 +66,7 @@ public class NotificationHelper extends ContextWrapper {
 
 
             return new NotificationCompat.Builder( getApplicationContext(), channelID )
-                    .setColor( ContextCompat.getColor( getApplicationContext(), R.color.colorJauneFonce ) )
+                    .setColor( ContextCompat.getColor( getApplicationContext(), R.color.colorMainTheme ) )
                     .setCustomContentView( collapsedView )
                     .setCustomBigContentView( expandedView )
                     .setStyle( new NotificationCompat.DecoratedCustomViewStyle() )
@@ -104,8 +104,8 @@ public class NotificationHelper extends ContextWrapper {
                 .setSmallIcon( R.drawable.ic_news_logo );  */
 
         return new NotificationCompat.Builder( getApplicationContext(), channelID )
-                .setColor( ContextCompat.getColor( getApplicationContext(), R.color.colorJauneFonce ) )
-                .setContentTitle( "Sorry, any article found with your selected settings ."  )
+                .setColor( ContextCompat.getColor( getApplicationContext(), R.color.colorMainTheme ) )
+                .setContentTitle( "Sorry, any article found with your selected criteria ."  )
                 .setContentText( "See you soon !" )
                 .setPriority( NotificationCompat.PRIORITY_HIGH )
                 .setSound( RingtoneManager.getDefaultUri( RingtoneManager.TYPE_ALARM ) )

@@ -69,8 +69,7 @@ public class TopStoriesFragment extends Fragment {
             @Override
             public void onResponse(@NonNull Call<TopStoriesResponse> call, @NonNull Response<TopStoriesResponse> response) {
 
-                assert response.body() != null;
-                resultsTS = response.body().getResults();
+                resultsTS =  response.body().getResults();
 
                 layoutManager = new GridLayoutManager(getContext(), 1);
                 mTopStoriesAdapter = new TopStoriesAdapter(getActivity(), resultsTS );

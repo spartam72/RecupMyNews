@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private ViewPager viewPager;
     private DrawerLayout drawer;
-    private final String[] pageTitle = {"TOP STORIES", "MOST POPULAR", "BUSINESS"};
+    private final String[] pageTitle = {"TOP STORIES","+ POPULAR","SPORTS","BUSINESS"};
     Toolbar toolbar;
     TabLayout tabLayout;
 
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //setting Tab layout (number of Tabs = number of ViewPager pages)
         tabLayout = findViewById( R.id.tab_layout );
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             tabLayout.addTab( tabLayout.newTab().setText( pageTitle[i] ) );
         }
 
@@ -76,14 +76,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 viewPager.setCurrentItem( tab.getPosition() );
 
                 if (tab.getPosition() == 0) {
-                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorIceBerg));
-                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorIceBerg));
+                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorWelcome));
+                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorWelcome));
                 } else if (tab.getPosition() == 1) {
-                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkOther));
-                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkOther));
+                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorAccent));
+                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccent));
+                }else if (tab.getPosition() == 2) {
+                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorSport));
+                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorSport));
                 } else {
-                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryOther ));
-                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryOther ));
+                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorNavyBlue ));
+                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorNavyBlue ));
                 }
             }
 
@@ -111,6 +114,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.nav_fr3) {
             viewPager.setCurrentItem( 2 );
+
+        }else if (id == R.id.nav_fr4) {
+            viewPager.setCurrentItem( 3 );
 
         } else if (id == R.id.nav_notif) {
             Intent intent = new Intent( MainActivity.this, NotificationsActivity.class );

@@ -70,7 +70,7 @@ public class TopStoriesAdapter extends RecyclerView.Adapter<TopStoriesAdapter.My
 
 
 
-        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorIceBerg) );
+        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorWelcome) );
 
         holder.section.setText( results.get( position ).getSection() );
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
@@ -80,8 +80,8 @@ public class TopStoriesAdapter extends RecyclerView.Adapter<TopStoriesAdapter.My
         try {
             Glide.with( context ).applyDefaultRequestOptions( new RequestOptions().placeholder( R.drawable.ic_news_logo )
                     .error( R.drawable.ic_news_logo ) )
-                    .load( results.get( position ).getMultimedia().get( 0 ).getUrl() )
-                    .centerInside().fitCenter()
+                    .load( results.get( position ).getMultimedia().get( 1 ).getUrl() )
+                    .centerCrop()
                     .apply( RequestOptions.centerCropTransform())
                     .into( holder.mImageUrl );
 

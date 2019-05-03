@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/colorJauneFonce"
+        android:backgroundTint="@color/colorWelcome"
         android:hint="@string/search_query_term_hint"
         android:importantForAutofill="no"
         android:inputType="text"
@@ -70,8 +70,8 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/colorJauneFonce" />
+                android:layout_height="0.5dp"
+                android:background="@color/colorWelcome" />
 
         </LinearLayout>
 
@@ -116,8 +116,8 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/colorJauneFonce" />
+                android:layout_height="0.5dp"
+                android:background="@color/colorWelcome" />
 
         </LinearLayout>
 
@@ -143,11 +143,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:backgroundTint="@color/colorAccent"
-                android:buttonTint="@color/colorJauneFonce"
+                android:backgroundTint="@color/colorXanadu"
+                android:buttonTint="@color/colorWelcome"
                 android:tag="10"
                 android:text="Arts"
-                android:textColorLink="@color/colorAccent"
                 android:textSize="16sp" />
 
             <android.support.v7.widget.AppCompatCheckBox
@@ -155,7 +154,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:buttonTint="@color/colorJauneFonce"
+                android:buttonTint="@color/colorWelcome"
                 android:tag="20"
                 android:text="Business"
                 android:textColorLink="@color/colorAccent"
@@ -165,7 +164,7 @@
                 android:id="@+id/check_box_entrepreneurs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/colorJauneFonce"
+                android:buttonTint="@color/colorWelcome"
                 android:tag="30"
                 android:text="Entrepreneurs"
                 android:textColorLink="@color/colorAccent"
@@ -184,7 +183,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorAccent"
-                android:buttonTint="@color/colorJauneFonce"
+                android:buttonTint="@color/colorWelcome"
                 android:text="Politics"
                 android:textColorLink="@color/colorAccent" />
 
@@ -193,7 +192,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:buttonTint="@color/colorJauneFonce"
+                android:buttonTint="@color/colorWelcome"
                 android:tag="40"
                 android:text="Sports"
                 android:textColorLink="@color/colorAccent"
@@ -204,7 +203,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:buttonTint="@color/colorJauneFonce"
+                android:buttonTint="@color/colorWelcome"
                 android:tag="50"
                 android:text="Travel"
                 android:textColorLink="@color/colorAccent"
@@ -231,7 +230,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="20dp"
-        android:background="@color/colorJauneFonce" />
+        android:background="@color/colorWelcome" />
 
     <RelativeLayout
         android:id="@+id/switch_relative_layout"
@@ -270,7 +269,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:background="@color/colorJauneFonce"
+        android:background="@color/colorWelcome"
         android:text="SEARCH"
         android:textColor="@android:color/white"
         android:textSize="20sp" />

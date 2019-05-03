@@ -64,13 +64,11 @@ public class BusinessFragment extends Fragment {
 
         SectionsAPI businessListAPI = ApiClient.getClient().create( SectionsAPI.class);
         Call<BusinessResponse> businessResponseCall = businessListAPI.BUArticles( "business" );
-        //Call<BusinessResponse> businessResponseCall = businessListAPI.BUArticles("business");
 
         businessResponseCall.enqueue(new Callback<BusinessResponse>() {
             @Override
             public void onResponse(@NonNull Call<BusinessResponse> call, @NonNull Response<BusinessResponse> response) {
 
-                assert response.body() != null;
                 resultsBU = response.body().getResults();
 
                 layoutManager = new GridLayoutManager(getContext(), 1);

@@ -6,8 +6,9 @@ public class Constant {
     public static final String TOP_STORIES = "topstories/v2/home.json";
     public static final String MOST_POPULAR = "mostpopular/v2/mostviewed/all-sections/1.json";
     public static final String BUSINESS = "topstories/v2/business.json";
+    public static final String SPORTS = "topstories/v2/sports.json";
     public static final String SEARCH_ARTICLES = "search/v2/articlesearch.json";
-    public static final String API_KEY = "T7b9q913pSk9mqEP2deYKZPh8bsJnLCN";
+    public static final String API_KEY = "GMA0nqWG0j2BDpSVYNd6t9HE0WpZsUx2";
 
     public static final String SEARCH_FIELD = "searchField";
     public static final String CHECKBOX_ARTS = "checkboxArts";

@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.spart.recupmynews.Fragments.BusinessFragment;
 import com.example.spart.recupmynews.Fragments.MostPopularFragment;
+import com.example.spart.recupmynews.Fragments.SportsFragment;
 import com.example.spart.recupmynews.Fragments.TopStoriesFragment;
 
 
@@ -21,11 +22,13 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
             return new TopStoriesFragment();
         } else if (position == 1) {
             return new MostPopularFragment();
+        } else if (position == 2) {
+            return new SportsFragment();
         } else return new BusinessFragment();
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 }

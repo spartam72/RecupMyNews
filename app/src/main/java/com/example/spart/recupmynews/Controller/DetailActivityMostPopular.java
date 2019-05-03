@@ -24,7 +24,7 @@ public class DetailActivityMostPopular extends AppCompatActivity {
         Toolbar toolbar =  findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
         Objects.requireNonNull( getSupportActionBar() ).setTitle( "Details from MostPopular Article" );
-        toolbar.setTitleTextColor(getResources().getColor( R.color.colorWhite ));
+        toolbar.setBackgroundColor( getResources().getColor( R.color.colorAccent ) );
         getSupportActionBar().setDisplayHomeAsUpEnabled( true );
 
         WebView webViewDetail = findViewById( R.id.webViewDescription );

@@ -69,8 +69,7 @@ public class MostPopularFragment extends Fragment {
             @Override
             public void onResponse(@NonNull Call<MostPopularResponse> call, @NonNull Response<MostPopularResponse> response) {
 
-                assert response.body() != null;
-                resultsMP = response.body().getResults();
+                resultsMP = Objects.requireNonNull( response.body() ).getResults();
 
                 layoutManager = new GridLayoutManager(getContext(), 1);
                 mMostPopularAdapter = new MostPopularAdapter(getActivity(), resultsMP );

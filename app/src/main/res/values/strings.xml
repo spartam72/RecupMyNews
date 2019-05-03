@@ -57,8 +57,9 @@
     <string name="most_popular30">Most Popular</string>
     <string name="top_stories30">Top Stories</string>
     <string name="top_stories50">Top Stories</string>
-    <string name="most_popular50">Most Popular</string>
+    <string name="most_popular50">+ Popular</string>
     <string name="business50">Business</string>
+    <string name="sports51">Sports</string>
     <string name="help55">Help</string>
     <string name="stay_informed_wherever_you_are">Stay informed wherever you are !</string>
     <string name="welcome1">Welcome !</string>

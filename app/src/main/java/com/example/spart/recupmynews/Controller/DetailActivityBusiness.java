@@ -24,7 +24,7 @@ public class DetailActivityBusiness extends AppCompatActivity {
         Toolbar toolbar =  findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
         Objects.requireNonNull( getSupportActionBar() ).setTitle( "Details from Business Article" );
-        toolbar.setTitleTextColor(getResources().getColor( R.color.colorWhite ));
+        toolbar.setBackgroundColor( getResources().getColor( R.color.colorNavyBlue ) );
         getSupportActionBar().setDisplayHomeAsUpEnabled( true );
 
         WebView webViewDetail = findViewById( R.id.webViewDescription );

@@ -71,7 +71,7 @@ public class MostPopularAdapter extends RecyclerView.Adapter<MostPopularAdapter.
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
-        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorPrimaryDarkOther) );
+        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorAccent) );
 
         holder.section.setText( results.get( position ).getSection() );
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
@@ -82,7 +82,7 @@ public class MostPopularAdapter extends RecyclerView.Adapter<MostPopularAdapter.
             Glide.with( context ).applyDefaultRequestOptions( new RequestOptions().placeholder( R.drawable.ic_news_logo )
                     .error( R.drawable.ic_news_logo ) )
                     .load( results.get( position ).getMedia().get( 0 ).getMediaMetadata().get( 0 ).getUrl() )
-                    .centerInside()
+                    .centerCrop()
                     .apply( RequestOptions.centerCropTransform())
                     .into( holder.mImageUrl );
 

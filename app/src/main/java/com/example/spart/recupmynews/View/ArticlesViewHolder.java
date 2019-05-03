@@ -40,7 +40,7 @@ public class ArticlesViewHolder extends  RecyclerView.ViewHolder {
     public void updateWithArticleSearch(ArticleSearchArticles articleSearchArticle, RequestManager glide){
         try{
             glide.load("https://static01.nyt.com/" + articleSearchArticle.getMultimedia().get(2).getUrl())
-                    .centerInside().fitCenter().fitCenter()
+                    .centerCrop()
                     .into(image)
                     ;
         } catch (IndexOutOfBoundsException e){

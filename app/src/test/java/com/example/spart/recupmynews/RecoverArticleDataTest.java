@@ -11,6 +11,7 @@ import com.example.spart.recupmynews.MyTopStoriesAPI.ArticleTopStories;
 import org.junit.Before;
 import org.junit.Test;
 
+
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
@@ -24,7 +25,7 @@ import static org.junit.Assert.assertEquals;
 public class RecoverArticleDataTest {
 
     private ArrayList<ArticleTopStories>articlesTS;
-    private ArrayList<ArticleBusiness>articlesBU;
+    private ArrayList<ArticleBusiness> articlesBU;
     private ArrayList<ArticleMostPopular>articlesMP;
     private ArrayList<ArticleSearchArticles> articlesSC;
 
