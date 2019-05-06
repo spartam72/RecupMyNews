@@ -79,7 +79,7 @@ public class RecoverArticleDataTest {
     }
     @Test
     public void getTitle() {
-        assertEquals("TopStories Title", articlesTS.get(0).getTitle());
+        assertEquals("TopStories Title", articlesTS.get().getTitle());
         assertEquals("MostPopular Title", articlesMP.get(0).getTitle());
         assertEquals("Search Title", articlesSC.get(0).getSnippet());
         assertEquals( "Business Title",articlesBU.get( 0 ).getTitle() );

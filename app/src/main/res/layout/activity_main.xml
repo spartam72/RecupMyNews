@@ -63,7 +63,7 @@
         android:fitsSystemWindows="true"
         android:theme="@style/NavigationDrawer.Theme"
         app:headerLayout="@layout/activity_main_nav_header"
-        app:itemIconTint="@color/colorOrange"
+        app:itemIconTint="@color/colorTopStories"
         app:itemTextColor="@color/colorBlack"
         app:menu="@menu/drawer_menu" />
 

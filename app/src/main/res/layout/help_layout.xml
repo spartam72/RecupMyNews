@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|fill_vertical"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/bigshot_one"
         android:paddingLeft="10dp"
         android:paddingTop="5dp"
         android:paddingRight="10dp"

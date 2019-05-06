@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <color name="colorTopStories">#848482</color>
+    <color name="colorTopStories">#0084B4</color>
     <color name="colorMostPopular">#DAA520</color>
     <color name="colorSport">#6EAB4B</color>
-    <color name="colorBusiness">#71A6D2</color>
+    <color name="colorBusiness">#848482</color>
 
-    <color name="colorStatusBarHome">#787876</color>
+    <color name="colorStatusBarHome">#0077A2</color>
     <color name="colorStatusBarMostPopular">#CF9E20</color>
     <color name="colorStatusBarSport">#639A43</color>
-    <color name="colorStatusBarBusiness">#5293C8</color>
-    <color name="colorStatusBarDetailTS">#787876</color>
+    <color name="colorStatusBarBusiness">#77777C</color>
+    <color name="colorStatusBarDetailTS">#0077A2</color>
     <color name="colorStatusBarDetailsMP">#CF9E20</color>
     <color name="colorStatusBarDetailsSPT">#639A43</color>
-    <color name="colorStatusBarDetailsBU">#5293C8</color>
-    <color name="colorStatusBarDetailsSearchAndNotification">#614051</color>
+    <color name="colorStatusBarDetailsBU">#77777C</color>
+
 
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
