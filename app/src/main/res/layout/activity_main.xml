@@ -29,7 +29,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorTopStories"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@color/colorOrange"
+            app:tabIndicatorColor="@color/colorTabIndicator"
             app:tabMode="fixed"
             app:tabSelectedTextColor="@color/colorWhite"
             app:tabTextColor="@android:color/background_light">
@@ -41,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/tablayout"
+            android:background="@color/colorWhite"
             tools:ignore="ObsoleteLayoutParam">
 
         </android.support.v4.view.ViewPager>
@@ -63,7 +64,7 @@
         android:fitsSystemWindows="true"
         android:theme="@style/NavigationDrawer.Theme"
         app:headerLayout="@layout/activity_main_nav_header"
-        app:itemIconTint="@color/colorTopStories"
+        app:itemIconTint="@color/colorBusiness"
         app:itemTextColor="@color/colorBlack"
         app:menu="@menu/drawer_menu" />
 

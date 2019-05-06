@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/skyline_manhattan_new_york_city" >
+    android:background="@drawable/earth_hand">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="3dp"
         android:fontFamily="@font/diplomata_sc"
         android:gravity="center"
         android:text="MyNews"
         android:textColor="@color/colorWhite"
         android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/diplomata_sc"
+        android:gravity="center"
+        android:text="The world in the palm of your hand !"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp" />
 </RelativeLayout>

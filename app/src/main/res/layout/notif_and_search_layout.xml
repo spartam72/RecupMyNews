@@ -13,11 +13,11 @@
         android:layout_marginBottom="10dp"
         android:backgroundTint="@color/colorMainTheme"
         android:hint="@string/search_query_term_hint"
-        android:importantForAutofill="no"
         android:inputType="text"
         android:textColor="@color/colorBlack"
         android:textColorLink="@color/colorOranger"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        tools:ignore="Autofill" />
 
     <LinearLayout
         android:id="@+id/linear_layout_date"
@@ -144,7 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:backgroundTint="@color/colorXanadu"
-                android:buttonTint="@color/colorMainTheme"
+                android:buttonTint="@color/colorTopStories"
                 android:tag="10"
                 android:text="Arts"
                 android:textSize="16sp" />
@@ -154,7 +154,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:buttonTint="@color/colorMainTheme"
+                android:buttonTint="@color/colorTopStories"
                 android:tag="20"
                 android:text="Business"
                 android:textColorLink="@color/colorMostPopular"
@@ -164,7 +164,7 @@
                 android:id="@+id/check_box_entrepreneurs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/colorMainTheme"
+                android:buttonTint="@color/colorTopStories"
                 android:tag="30"
                 android:text="Entrepreneurs"
                 android:textColorLink="@color/colorMostPopular"
@@ -183,7 +183,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorMostPopular"
-                android:buttonTint="@color/colorMainTheme"
+                android:buttonTint="@color/colorTopStories"
                 android:text="Politics"
                 android:textColorLink="@color/colorMostPopular" />
 
@@ -192,7 +192,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:buttonTint="@color/colorMainTheme"
+                android:buttonTint="@color/colorTopStories"
                 android:tag="40"
                 android:text="Sports"
                 android:textColorLink="@color/colorMostPopular"
@@ -203,7 +203,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:buttonTint="@color/colorMainTheme"
+                android:buttonTint="@color/colorTopStories"
                 android:tag="50"
                 android:text="Travel"
                 android:textColorLink="@color/colorMostPopular"
@@ -254,11 +254,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:backgroundTint="@color/colorMostPopular"
-            android:button="@color/colorMostPopular"
-            android:buttonTint="@color/colorMostPopular"
-            android:textColorHint="@color/colorMostPopular"
-            android:textColorLink="@color/colorMostPopular" />
+            android:backgroundTint="@color/colorTopStories"
+            android:button="@color/colorTopStories"
+            android:buttonTint="@color/colorTopStories"
+            android:shadowColor="@color/colorTopStories"
+            android:textColorHighlight="@color/colorTopStories"
+            android:textColorHint="@color/colorTopStories"
+            android:textColorLink="@color/colorTopStories" />
 
     </RelativeLayout>
 

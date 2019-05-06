@@ -19,8 +19,8 @@
 
     <!-- Date Picker Theme -->
     <style name="DatePickerTheme" parent="Theme.AppCompat.Light.Dialog">
-        <item name="colorAccent">@color/colorSport</item>
-        <item name="colorControlActivated">@color/colorRouge</item>
+        <item name="colorAccent">@color/colorBusiness</item>
+        <item name="colorControlActivated">@color/colorBusiness</item>
         <item name="colorControlHighlight">@color/colorText</item>
     </style>
 
