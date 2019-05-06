@@ -6,6 +6,7 @@ package com.example.spart.recupmynews;
 import com.example.spart.recupmynews.MyArticleSearchAPI.ArticleSearchArticles;
 import com.example.spart.recupmynews.MyBusinessAPI.ArticleBusiness;
 import com.example.spart.recupmynews.MyMostPopularAPI.ArticleMostPopular;
+import com.example.spart.recupmynews.MySportsAPI.ArticleSport;
 import com.example.spart.recupmynews.MyTopStoriesAPI.ArticleTopStories;
 
 import org.junit.Before;
@@ -27,6 +28,7 @@ public class RecoverArticleDataTest {
     private ArrayList<ArticleTopStories>articlesTS;
     private ArrayList<ArticleBusiness> articlesBU;
     private ArrayList<ArticleMostPopular>articlesMP;
+    private ArrayList<ArticleSport> articlesSPT;
     private ArrayList<ArticleSearchArticles> articlesSC;
 
     @Before
@@ -66,6 +68,17 @@ public class RecoverArticleDataTest {
 
     }
     @Before
+    public void ArticleSports() {
+        articlesSPT = new ArrayList<>();
+        ArticleSport articleSport = new ArticleSport();
+        articleSport.setTitle( "Sports Title" );
+        articleSport.setSection( "Sports" );
+        articleSport.setUrl( "http://www.articlesSPT.com" );
+        articleSport.setUpdatedDate( "2019-01-01T00:00:00W" );
+
+        articlesSPT.add( articleSport );
+    }
+    @Before
     public void ArticleSearch(){
 
         articlesSC = new ArrayList<>();
@@ -83,6 +96,7 @@ public class RecoverArticleDataTest {
         assertEquals("MostPopular Title", articlesMP.get(0).getTitle());
         assertEquals("Search Title", articlesSC.get(0).getSnippet());
         assertEquals( "Business Title",articlesBU.get( 0 ).getTitle() );
+        assertEquals( "Sports Title",articlesSPT.get( 0 ).getTitle() );
     }
 
     @Test
@@ -91,6 +105,7 @@ public class RecoverArticleDataTest {
         assertEquals("MostPopular", articlesMP.get(0).getSection());
         assertEquals("Search", articlesSC.get(0).getSectionName());
         assertEquals("Business", articlesBU.get(0).getSection());
+        assertEquals("Sports", articlesSPT.get(0).getSection());
     }
 
     @Test
@@ -99,6 +114,7 @@ public class RecoverArticleDataTest {
         assertEquals("http://www.articlesMP.com", articlesMP.get(0).getUrl());
         assertEquals("http://www.articlesSearch.com", articlesSC.get(0).getWebUrl());
         assertEquals("http://www.articlesBU.com", articlesBU.get(0).getUrl());
+        assertEquals("http://www.articlesSPT.com", articlesSPT.get(0).getUrl());
     }
 
     @Test
@@ -107,5 +123,6 @@ public class RecoverArticleDataTest {
         assertEquals("2019-01-01T00:00:00W", articlesMP.get(0).getPublishedDate());
         assertEquals("2019-01-01T00:00:00W", articlesSC.get(0).getPubDate());
         assertEquals("2019-01-01T00:00:00W", articlesBU.get(0).getPublishedDate());
+        assertEquals("2019-01-01T00:00:00W", articlesSPT.get(0).getPublishedDate());
     }
 }
