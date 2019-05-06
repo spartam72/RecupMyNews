@@ -11,7 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWelcome"
+        android:background="@color/colorTopStories"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -20,40 +20,50 @@
 
     </android.support.v7.widget.Toolbar>
 
-
-    <android.support.v4.widget.NestedScrollView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fillViewport="true"
-        android:padding="10dp">
+        android:layout_gravity="center_horizontal|fill_vertical"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:text="My News application for Android brings the award-winning journalism of The New York Times to your Android device. The app has been specifically designed for browsing and navigating articles, features and video on the Android platform. Get it for free from the Google Play Store and start enjoying My News on your Android smartphone and tablet."
+        android:textColor="@color/colorBlack"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/skyline_manhattan_new_york_city"
+            android:orientation="vertical">
+
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MyNews application for Android brings the award-winning journalism of The New York Times to your Android device. The app has been specifically designed for browsing and navigating articles, features and video on the Android platform. Get it for free from the Google Play Store and start enjoying MyNews on your Android smartphone and tablet. "
-            android:textColor="@color/colorBlack" />
+            android:id="@+id/textView6"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:text="www.mynews.com"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp"
+            tools:ignore="NestedWeights,ObsoleteLayoutParam,SmallSp" />
 
+    </LinearLayout>
 
-    </android.support.v4.widget.NestedScrollView>
-
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="110dp"
-        app:srcCompat="@drawable/globe_news"
-        tools:ignore="ContentDescription" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:gravity="center"
-        android:text="www.mynews.com"
-        android:textColor="@color/colorBlack" />
 
 </LinearLayout>
+
+

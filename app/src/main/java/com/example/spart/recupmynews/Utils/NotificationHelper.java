@@ -51,14 +51,14 @@ public class NotificationHelper extends ContextWrapper {
      */
     public NotificationCompat.Builder getChannelArticlesFoundYes(int numberOfArticles) {
 
-            RemoteViews collapsedView = new RemoteViews( getPackageName(), R.layout.notification_collapsed );
+     /*      RemoteViews collapsedView = new RemoteViews( getPackageName(), R.layout.notification_collapsed );
             RemoteViews expandedView = new RemoteViews( getPackageName(), R.layout.notification_expanded );
 
 
             collapsedView.setTextViewText( R.id.text_view_collapsed_1, "Hello, dear reader!" );
-            collapsedView.setTextViewText( R.id.text_view_collapsed_2, numberOfArticles + " Article(s) found with your selected criteria !" );
-            expandedView.setTextViewText( R.id.text_view_expanded, numberOfArticles + " Article(s) found with your selected settings !" );
-            expandedView.setTextViewText( R.id.text_view_expanded_1, "Click on image to see result(s)." );
+            collapsedView.setTextViewText( R.id.text_view_collapsed_2, numberOfArticles  +  Constant.NOTIFICATION_POSITIVE );
+            expandedView.setTextViewText( R.id.text_view_expanded, numberOfArticles +  Constant.NOTIFICATION_POSITIVE );
+            expandedView.setTextViewText( R.id.text_view_expanded_1, Constant.NOTIFICATION_POSITIVE_CLICK );
 
         Intent resultIntent = new Intent(getBaseContext(), SearchResultActivity.class);
         resultIntent.putExtra("NotificationKeyTitle","Notification Results");
@@ -74,7 +74,23 @@ public class NotificationHelper extends ContextWrapper {
                     .setSound( RingtoneManager.getDefaultUri( RingtoneManager.TYPE_NOTIFICATION ) )
                     .setContentIntent(pendingIntent)
                     .setAutoCancel(false)
-                    .setSmallIcon( R.drawable.ic_news_logo );
+                    .setSmallIcon( R.drawable.ic_news_logo );*/
+
+
+        Intent resultIntent = new Intent(getBaseContext(), SearchResultActivity.class);
+        resultIntent.putExtra("NotificationKeyTitle","Notification Results");
+        PendingIntent pendingIntent = PendingIntent.getActivity(getBaseContext(), 0, resultIntent, PendingIntent.FLAG_IMMUTABLE);
+
+        return new NotificationCompat.Builder( getApplicationContext(), channelID )
+                .setColor( ContextCompat.getColor( getApplicationContext(), R.color.vert ) )
+                .setContentTitle(Constant.NOTIFICATION_HELLO )
+                .setContentText(numberOfArticles + Constant.NOTIFICATION_POSITIVE  )
+                .setSubText(  Constant.NOTIFICATION_POSITIVE_CLICK)
+                .setPriority( NotificationCompat.PRIORITY_HIGH )
+                .setSound( RingtoneManager.getDefaultUri( RingtoneManager.TYPE_NOTIFICATION ) )
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(false)
+                .setSmallIcon( R.drawable.ic_news_logo );
 
     }
 
@@ -85,28 +101,11 @@ public class NotificationHelper extends ContextWrapper {
 
     public NotificationCompat.Builder getChannelArticlesFoundNo() {
 
-     /*   RemoteViews collapsedView = new RemoteViews( getPackageName(),R.layout.notification_collapsed );
-        RemoteViews expandedView = new RemoteViews( getPackageName(),R.layout.notification_expanded );
-
-        collapsedView.setTextViewText( R.id.text_view_collapsed_1,"Hello, dear reader!" );
-        collapsedView.setTextViewText( R.id.text_view_collapsed_2,"Sorry, any article found with your selected settings ." );
-        expandedView.setTextViewText(  R.id.text_view_expanded,"Sorry, any article found with your selected settings ." );
-        expandedView.setTextColor(  R.id.text_view_expanded,getColor( R.color.colorAccent ) );
-        expandedView.setTextViewText( R.id.text_view_expanded_1,"See you soon !"  );
-
         return new NotificationCompat.Builder( getApplicationContext(), channelID )
-                .setCustomContentView( collapsedView )
-                .setCustomBigContentView( expandedView )
-                .setStyle( new NotificationCompat.DecoratedCustomViewStyle() )
-                .setPriority( NotificationCompat.PRIORITY_HIGH )
-                .setSound( RingtoneManager.getDefaultUri( RingtoneManager.TYPE_ALARM ) )
-                .setAutoCancel( true )
-                .setSmallIcon( R.drawable.ic_news_logo );  */
-
-        return new NotificationCompat.Builder( getApplicationContext(), channelID )
-                .setColor( ContextCompat.getColor( getApplicationContext(), R.color.colorMainTheme ) )
-                .setContentTitle( "Sorry, any article found with your selected criteria ."  )
-                .setContentText( "See you soon !" )
+                .setColor( ContextCompat.getColor( getApplicationContext(), R.color.colorRouge ) )
+                .setContentTitle(  Constant.NOTIFICATION_HELLO )
+                .setContentText(  Constant.NOTIFICATION_NEGATIVE)
+                .setSubText( Constant.NOTIFICATION_NEGATIVE_BYE )
                 .setPriority( NotificationCompat.PRIORITY_HIGH )
                 .setSound( RingtoneManager.getDefaultUri( RingtoneManager.TYPE_ALARM ) )
                 .setSmallIcon( R.drawable.ic_news_logo );

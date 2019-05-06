@@ -2,6 +2,7 @@ package com.example.spart.recupmynews.Controller;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.webkit.WebView;
@@ -24,8 +25,9 @@ public class DetailActivityMostPopular extends AppCompatActivity {
         Toolbar toolbar =  findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
         Objects.requireNonNull( getSupportActionBar() ).setTitle( "Details from MostPopular Article" );
-        toolbar.setBackgroundColor( getResources().getColor( R.color.colorAccent ) );
+        toolbar.setBackgroundColor( getResources().getColor( R.color.colorMostPopular ) );
         getSupportActionBar().setDisplayHomeAsUpEnabled( true );
+        getWindow().setStatusBarColor( ContextCompat.getColor(this, R.color.colorStatusBarDetailsMP ));
 
         WebView webViewDetail = findViewById( R.id.webViewDescription );
         ArticleMostPopular result = (ArticleMostPopular) Objects.requireNonNull( getIntent().getExtras() ).getSerializable( "result" );

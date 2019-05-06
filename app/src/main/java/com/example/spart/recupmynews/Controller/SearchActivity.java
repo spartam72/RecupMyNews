@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -80,6 +81,7 @@ public class SearchActivity extends AppCompatActivity {
         setSupportActionBar( toolbar );
         Objects.requireNonNull( getSupportActionBar() ).setTitle( "Searh Articles" );
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getWindow().setStatusBarColor( ContextCompat.getColor(this, R.color.colorStatusBarHome ));
 
         searchQueryTerm = findViewById( R.id.search_query_term_text_input_edit_text );
         checkBoxArts = findViewById( R.id.check_box_arts );

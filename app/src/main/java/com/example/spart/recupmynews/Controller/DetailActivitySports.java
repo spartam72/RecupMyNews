@@ -2,6 +2,7 @@ package com.example.spart.recupmynews.Controller;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.webkit.WebView;
@@ -26,6 +27,7 @@ public class DetailActivitySports extends AppCompatActivity {
         Objects.requireNonNull( getSupportActionBar() ).setTitle( "Details from Sports Article" );
         toolbar.setBackgroundColor( getResources().getColor( R.color.colorSport ) );
         getSupportActionBar().setDisplayHomeAsUpEnabled( true );
+        getWindow().setStatusBarColor( ContextCompat.getColor(this, R.color.colorStatusBarDetailsSPT ));
 
         WebView webViewDetail = findViewById( R.id.webViewDescription );
         ArticleSport result = (ArticleSport) Objects.requireNonNull( getIntent().getExtras() ).getSerializable( "result" );

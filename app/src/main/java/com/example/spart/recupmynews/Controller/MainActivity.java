@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.spart.recupmynews.R;
+import com.example.spart.recupmynews.Utils.Constant;
 import com.example.spart.recupmynews.View.ViewPagerAdapter;
 
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private ViewPager viewPager;
     private DrawerLayout drawer;
-    private final String[] pageTitle = {"TOP STORIES","+ POPULAR","SPORTS","BUSINESS"};
+    private final String[] pageTitle = {Constant.TAB_LAYOUT_TOP_STORIES,Constant.TAB_LAYOUT_MOST_POPULAR,Constant.TAB_LAYOUT_SPORTS,Constant.TAB_LAYOUT_BUSINESS};
     Toolbar toolbar;
     TabLayout tabLayout;
 
@@ -38,9 +39,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar = findViewById( R.id.toolbar );
         drawer = findViewById( R.id.drawerLayout );
 
-        setSupportActionBar( toolbar );
+
         toolbar.setTitleTextColor(getResources().getColor( R.color.colorWhite));
         toolbar.setTitleMarginStart( 120 );
+        toolbar.setTitleTextAppearance( this,R.style.ToolbarThemeMainActivity );
+        setSupportActionBar( toolbar );
+        getWindow().setStatusBarColor( ContextCompat.getColor(this, R.color.colorStatusBarHome ));
 
         //create default navigation drawer toggle
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle( this, drawer, toolbar,
@@ -76,17 +80,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 viewPager.setCurrentItem( tab.getPosition() );
 
                 if (tab.getPosition() == 0) {
-                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorWelcome));
-                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorWelcome));
+                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorTopStories ));
+                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorTopStories ));
+                    getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,
+                            R.color.colorStatusBarHome ));
                 } else if (tab.getPosition() == 1) {
-                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorAccent));
-                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccent));
+                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorMostPopular ));
+                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorMostPopular ));
+                    getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,
+                            R.color.colorStatusBarMostPopular ));
                 }else if (tab.getPosition() == 2) {
                     toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorSport));
                     tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorSport));
+                    getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,
+                            R.color.colorStatusBarSport ));
                 } else {
-                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorNavyBlue ));
-                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorNavyBlue ));
+                    toolbar.setBackgroundColor( ContextCompat.getColor(MainActivity.this, R.color.colorBusiness ));
+                    tabLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorBusiness ));
+                    getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,
+                            R.color.colorStatusBarBusiness ));
                 }
             }
 
@@ -188,6 +200,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent intent3 = new Intent(
                         MainActivity.this, AboutActivity.class );
                 startActivity( intent3 );
+                return true;
+            case R.id.close_the_app_menu:
+                MainActivity.this.finish();
                 return true;
             default:
                 return false;

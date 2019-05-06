@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.webkit.WebView;
@@ -34,6 +35,7 @@ public class ArticleDetailsActivity extends AppCompatActivity {
         Objects.requireNonNull( getSupportActionBar() ).setTitle( "Article details" );
         toolbar.setTitleTextColor(getResources().getColor( R.color.colorWhite ));
         getSupportActionBar().setDisplayHomeAsUpEnabled( true );
+        getWindow().setStatusBarColor( ContextCompat.getColor(this, R.color.colorTopStories ));
 
         ButterKnife.bind(this);
         this.configureWebView();

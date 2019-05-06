@@ -13,8 +13,10 @@
 
     <item
         android:id="@+id/notifications_popup"
+        android:icon="@drawable/ic_notifications_white"
         android:title="@string/notifications13"
-        android:visible="true" />
+        android:visible="true"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/help_popup"
@@ -24,5 +26,10 @@
     <item
         android:id="@+id/about_popup"
         android:title="@string/about13"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/close_the_app_menu"
+        android:title="Close App"
         android:visible="true" />
 </menu>

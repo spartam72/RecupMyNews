@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -59,6 +60,7 @@ public class SearchResultActivity extends AppCompatActivity {
         Objects.requireNonNull( getSupportActionBar() ).setTitle(NotificationKeyTitle!= null?NotificationKeyTitle: "Search Results" );
         toolbar.setTitleTextColor(getResources().getColor( R.color.colorWhite ));
         getSupportActionBar().setDisplayHomeAsUpEnabled( true );
+        getWindow().setStatusBarColor( ContextCompat.getColor(this, R.color.colorStatusBarHome ));
 
         recyclerView = findViewById( R.id.fragment_search_result_recycler_view );
 

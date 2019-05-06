@@ -61,7 +61,7 @@ public class MostPopularAdapter extends RecyclerView.Adapter<MostPopularAdapter.
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final View itemView = LayoutInflater.from(parent.getContext())
-                .inflate( R.layout.article_item_categories,parent, false);
+                .inflate( R.layout.article_item_categories_modif,parent, false);
 
 
         return new MyViewHolder(itemView);
@@ -71,7 +71,8 @@ public class MostPopularAdapter extends RecyclerView.Adapter<MostPopularAdapter.
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
-        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorAccent) );
+        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorMostPopular ) );
+      //  holder.mPublishedDate.setTextColor(  ContextCompat.getColor(context,R.color.colorMostPopular ) );
 
         holder.section.setText( results.get( position ).getSection() );
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));

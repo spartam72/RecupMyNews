@@ -6,10 +6,10 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorWelcome"
+    android:background="@color/colorTopStories"
     android:minHeight="?attr/actionBarSize"
 
     android:textColorSecondary="@color/colorWhite"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    android:theme="@style/ToolbarTheme"
     app:popupTheme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
     app:titleTextAppearance="@style/TextAppearance.AppCompat.Title" />

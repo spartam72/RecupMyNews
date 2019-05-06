@@ -27,11 +27,11 @@
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorWelcome"
+            android:background="@color/colorTopStories"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@color/colorBlack"
+            app:tabIndicatorColor="@color/colorOrange"
             app:tabMode="fixed"
-            app:tabSelectedTextColor="@color/colorBlack"
+            app:tabSelectedTextColor="@color/colorWhite"
             app:tabTextColor="@android:color/background_light">
 
         </android.support.design.widget.TabLayout>
@@ -63,7 +63,7 @@
         android:fitsSystemWindows="true"
         android:theme="@style/NavigationDrawer.Theme"
         app:headerLayout="@layout/activity_main_nav_header"
-        app:itemIconTint="@color/colorNavyBlue"
+        app:itemIconTint="@color/colorOrange"
         app:itemTextColor="@color/colorBlack"
         app:menu="@menu/drawer_menu" />
 

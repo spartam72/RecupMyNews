@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="colorTopStories">#848482</color>
+    <color name="colorMostPopular">#DAA520</color>
+    <color name="colorSport">#6EAB4B</color>
+    <color name="colorBusiness">#71A6D2</color>
+
+    <color name="colorStatusBarHome">#787876</color>
+    <color name="colorStatusBarMostPopular">#CF9E20</color>
+    <color name="colorStatusBarSport">#639A43</color>
+    <color name="colorStatusBarBusiness">#5293C8</color>
+    <color name="colorStatusBarDetailTS">#787876</color>
+    <color name="colorStatusBarDetailsMP">#CF9E20</color>
+    <color name="colorStatusBarDetailsSPT">#639A43</color>
+    <color name="colorStatusBarDetailsBU">#5293C8</color>
+    <color name="colorStatusBarDetailsSearchAndNotification">#614051</color>
+
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#DAA520</color>
     <color name="colorJaune">#E4D00A</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="colorNavyBlue">#4682B4</color>
     <color name="colorBlack">#000000</color>
     <color name="colorDarkCandyAppleRed" tools:ignore="MissingDefaultResource">#800000</color>
     <color name="colorPistache">#85BB65</color>
@@ -14,20 +28,19 @@
     <color name="colorDesert">#C19A6B</color>
     <color name="colorPastelBrown">#414833</color>
     <color name="colorIceBerg">#5D3954</color>
-    <color name="colorOrangeLight">#ff7d47</color>
-    <color name="colorWelcome">#738678</color>
+    <color name="colorOrange">#C96400</color>
     <color name="colorYellow">#E4D00A</color>
     <color name="colorXanadu" >#CE1620</color>
     <color name="colorMyGray">#321414</color>
-    <color name="colorBleuDeFrance" >#738678</color>
+    <color name="colorBleuDeFrance" >#000080</color>
     <color name="colorMainTheme">#555555</color>
     <color name="colorText">#D0D0D0</color>
     <color name="vert">#03C03C</color>
-    <color name="colorJauneFonce">#FF1C00</color>
+    <color name="colorRouge">#FF1C00</color>
     <color name="colorAutreJaune">#FFC107</color>
     <color name="colorPrimaryOther">#009688</color>
     <color name="colorPrimaryDarkOther">#FFA000</color>
-    <color name="colorSport">#138808</color>
+
 
 
 </resources>

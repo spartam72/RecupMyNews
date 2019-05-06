@@ -62,7 +62,7 @@ public class BusinessAdapter extends RecyclerView.Adapter<BusinessAdapter.MyView
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final View itemView = LayoutInflater.from(parent.getContext())
-                .inflate( R.layout.article_item_categories,parent, false);
+                .inflate( R.layout.article_item_categories_modif,parent, false);
 
 
         return new MyViewHolder(itemView);
@@ -72,7 +72,8 @@ public class BusinessAdapter extends RecyclerView.Adapter<BusinessAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
-        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorNavyBlue) );
+        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorBusiness ) );
+      //  holder.mPublishedDate.setTextColor(  ContextCompat.getColor(context,R.color.colorBusiness ) );
 
         holder.section.setText( results.get( position ).getSection() );
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
