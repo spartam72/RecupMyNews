@@ -4,4 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/skyline_manhattan_new_york_city" />
+    android:background="@drawable/skyline_manhattan_new_york_city" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/diplomata_sc"
+        android:gravity="center"
+        android:text="MyNews"
+        android:textColor="@color/colorWhite"
+        android:textSize="36sp" />
+</RelativeLayout>
