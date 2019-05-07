@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -38,7 +39,7 @@ public class NotificationsActivity extends AppCompatActivity implements Compound
     private CheckBox checkBoxSports;
     private CheckBox checkBoxEntrepreneurs;
     private CheckBox checkBoxTravel;
-    private Switch mySwitch;
+    private SwitchCompat mySwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

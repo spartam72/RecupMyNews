@@ -26,7 +26,7 @@ public class Constant {
     //Notification Message
     public static final String NOTIFICATION_HELLO = "Hello, dear reader!";
     public static final String NOTIFICATION_POSITIVE = " Article(s) found with your settings !";
-    public static final String NOTIFICATION_POSITIVE_CLICK = "Click on image to see result(s).";
+    public static final String NOTIFICATION_POSITIVE_CLICK = "Click on notification to see result.";
     public static final String NOTIFICATION_NEGATIVE = "Sorry, no article found with your settings .";
     public static final String NOTIFICATION_NEGATIVE_BYE = "See you soon !";
 

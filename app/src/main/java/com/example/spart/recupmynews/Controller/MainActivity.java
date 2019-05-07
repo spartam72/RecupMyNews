@@ -39,10 +39,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar = findViewById( R.id.toolbar );
         drawer = findViewById( R.id.drawerLayout );
 
-
-        toolbar.setTitleTextColor(getResources().getColor( R.color.colorWhite));
-        toolbar.setTitleMarginStart( 120 );
-        toolbar.setTitleTextAppearance( this,R.style.ToolbarThemeMainActivity );
+        toolbar.setTitleMarginStart( 100 );
+     //   toolbar.setTitleTextAppearance( this,R.style.ToolbarThemeMainActivity );
         setSupportActionBar( toolbar );
         getWindow().setStatusBarColor( ContextCompat.getColor(this, R.color.colorStatusBarHome ));
 

@@ -33,7 +33,6 @@ public class ArticleDetailsActivity extends AppCompatActivity {
         Toolbar toolbar =  findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
         Objects.requireNonNull( getSupportActionBar() ).setTitle( "Article details" );
-        toolbar.setTitleTextColor(getResources().getColor( R.color.colorWhite ));
         getSupportActionBar().setDisplayHomeAsUpEnabled( true );
         getWindow().setStatusBarColor( ContextCompat.getColor(this, R.color.colorTopStories ));
 

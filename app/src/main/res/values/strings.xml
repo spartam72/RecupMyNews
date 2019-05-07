@@ -98,10 +98,7 @@
     <string name="verification_checkbox">You must select at least  one category</string>
     <string name="verification_dates">"Begin Date" must be before "End Date"</string>
     <string name="no_internet">No internet connection detected </string>
-
-
-
-
+    <string name="mynews">MyNews</string>
 
 
 </resources>
