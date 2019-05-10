@@ -99,6 +99,8 @@
     <string name="verification_dates">"Begin Date" must be before "End Date"</string>
     <string name="no_internet">No internet connection detected </string>
     <string name="mynews">MyNews</string>
+    <string name="todo1">TODO1</string>
+    <string name="screen">splash</string>
 
 
 </resources>

@@ -7,13 +7,10 @@
     android:background="@color/colorWhite"
     android:gravity="center">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/globe_news"
-        tools:layout_editor_absoluteX="16dp" />
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/iv_hanging"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+        android:src="@drawable/surface_terre" />
 
 </RelativeLayout>

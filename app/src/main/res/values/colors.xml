@@ -4,18 +4,18 @@
     <color name="colorTopStories">#DAA520</color>
     <color name="colorMostPopular">#4682B4</color>
     <color name="colorSport">#008000</color>
-    <color name="colorBusiness">#8F8F8D</color>
+    <color name="colorBusiness">#999997</color>
 
     <color name="colorStatusBarHome">#CF9E20</color>
     <color name="colorStatusBarMostPopular">#4076A3</color>
     <color name="colorStatusBarSport">#007100</color>
-    <color name="colorStatusBarBusiness">#828280</color>
+    <color name="colorStatusBarBusiness">#7D7D7B</color>
     <color name="colorStatusBarDetailTS">#CF9E20</color>
     <color name="colorStatusBarDetailsMP">#4076A3</color>
     <color name="colorStatusBarDetailsSPT">#007100</color>
-    <color name="colorStatusBarDetailsBU">#828280</color>
-    <color name="colorTabIndicator">#DB0000</color>
-    <color name="colorIconNavigation">#2A52BE</color>
+    <color name="colorStatusBarDetailsBU">#7D7D7B</color>
+    <color name="colorTabIndicator">#FF0000</color>
+    <color name="colorIconNavigation">#800000</color>
 
 
     <color name="colorPrimary">#008577</color>
@@ -23,7 +23,6 @@
     <color name="colorJaune">#E4D00A</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
-    <color name="colorDarkCandyAppleRed" tools:ignore="MissingDefaultResource">#800000</color>
     <color name="colorPistache">#85BB65</color>
     <color name="colorOranger">#738678</color>
     <color name="colorBrown">#3D2B1F</color>

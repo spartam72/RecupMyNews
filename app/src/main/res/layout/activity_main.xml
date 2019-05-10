@@ -64,7 +64,7 @@
         android:fitsSystemWindows="true"
         android:theme="@style/NavigationDrawer.Theme"
         app:headerLayout="@layout/activity_main_nav_header"
-        app:itemIconTint="@color/colorIconNavigation"
+        app:itemIconTint="@color/colorStatusBarHome"
         app:itemTextColor="@color/colorBlack"
         app:menu="@menu/drawer_menu" />
 
