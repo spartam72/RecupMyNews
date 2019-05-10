@@ -2,7 +2,7 @@ package com.example.spart.recupmynews.Utils;
 
 public class Constant {
 
-    //API Http and Key
+    //API Http adress and Key
     public static final String BASE_URL = "http://api.nytimes.com/svc/";
     public static final String TOP_STORIES = "topstories/v2/home.json";
     public static final String MOST_POPULAR = "mostpopular/v2/mostviewed/all-sections/1.json";
