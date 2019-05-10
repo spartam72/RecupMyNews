@@ -1,5 +1,6 @@
 package com.example.spart.recupmynews.View;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
@@ -32,11 +33,14 @@ public class ArticlesViewHolder extends  RecyclerView.ViewHolder {
 
 
 
+
+
     public ArticlesViewHolder(View itemView) {
         super(itemView);
         ButterKnife.bind(this, itemView);
     }
 
+    @SuppressLint("SetTextI18n")
     public void updateWithArticleSearch(ArticleSearchArticles articleSearchArticle, RequestManager glide){
         try{
             glide.load("https://static01.nyt.com/" + articleSearchArticle.getMultimedia().get(2).getUrl())
@@ -46,7 +50,6 @@ public class ArticlesViewHolder extends  RecyclerView.ViewHolder {
         } catch (IndexOutOfBoundsException e){
             e.printStackTrace();
         }
-        this.category.setText(articleSearchArticle.getSectionName());
         try {
             this.date.setText( DateConvertUtils.getPublished_date_converted( articleSearchArticle.getPubDate().substring(0, 10)));
         }catch (Exception e){
@@ -55,6 +58,14 @@ public class ArticlesViewHolder extends  RecyclerView.ViewHolder {
         }
         this.title.setText(articleSearchArticle.getSnippet());
         this.headline.setText( articleSearchArticle.getHeadline().getMain() );
+
+        if(articleSearchArticle.getSubsectionName()!= null){
+
+            this.category.setText(articleSearchArticle.getSectionName() + " > " + articleSearchArticle.getSubsectionName());
+
+        }else {
+            this.category.setText(articleSearchArticle.getSectionName() + " > ");
+        }
     }
 }
 

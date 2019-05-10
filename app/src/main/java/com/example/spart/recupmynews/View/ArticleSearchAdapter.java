@@ -30,7 +30,7 @@ public class ArticleSearchAdapter extends RecyclerView.Adapter<ArticlesViewHolde
     public ArticlesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate( R.layout.article_item_search_modif, parent, false);
+        View view = inflater.inflate( R.layout.article_item_search_modif_subsection, parent, false);
 
         return new ArticlesViewHolder(view);
     }

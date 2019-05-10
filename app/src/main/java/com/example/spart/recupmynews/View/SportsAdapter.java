@@ -60,7 +60,7 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.MyViewHold
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final View itemView = LayoutInflater.from(parent.getContext())
-                .inflate( R.layout.article_item_categories_modif,parent, false);
+                .inflate( R.layout.article_item_categories_modif_sub_section,parent, false);
         return new MyViewHolder(itemView);
     }
 
@@ -71,9 +71,12 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.MyViewHold
 
 
         holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorSport ) );
-      //  holder.mPublishedDate.setTextColor(  ContextCompat.getColor(context,R.color.colorSport ) );
 
-        holder.section.setText( results.get( position ).getSection() );
+        if(results.get( position ).getSubsection()!=null) {
+            holder.section.setText( results.get( position ).getSection() + " > " + results.get( position ).getSubsection() );
+        }else {
+            holder.section.setText( results.get( position ).getSection() + " > ");
+        }
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
         holder.mTitle.setText(results.get( position ).getTitle() );
         holder.mAbstractDesc.setText( results.get( position ).get_abstract());

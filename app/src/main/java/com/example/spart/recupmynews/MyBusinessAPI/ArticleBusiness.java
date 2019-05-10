@@ -15,6 +15,9 @@ public class ArticleBusiness implements Serializable {
     @SerializedName("section")
     @Expose
     private String section;
+    @SerializedName("subsection")
+    @Expose
+    private String subsection;
     @SerializedName("title")
     @Expose
     private String title;
@@ -105,5 +108,13 @@ public class ArticleBusiness implements Serializable {
 
     public void setMultimedia(List<MediaMetadatum> multimedia) {
         this.multimedia = multimedia;
+    }
+
+    public String getSubsection() {
+        return subsection;
+    }
+
+    public void setSubsection(String subsection) {
+        this.subsection = subsection;
     }
 }

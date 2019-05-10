@@ -31,6 +31,9 @@ public class ArticleSearchArticles {
     @SerializedName("section_name")
     @Expose
     private String sectionName;
+    @SerializedName( "subsection_name" )
+    @Expose
+    private String subsectionName;
 
     public String getWebUrl() {
         return webUrl;
@@ -96,4 +99,11 @@ public class ArticleSearchArticles {
         this.sectionName = sectionName;
     }
 
+    public String getSubsectionName() {
+        return subsectionName;
+    }
+
+    public void setSubsectionName(String subsectionName) {
+        this.subsectionName = subsectionName;
+    }
 }

@@ -11,6 +11,9 @@ public class ArticleSport implements Serializable {
     @SerializedName("section")
     @Expose
     private String section;
+    @SerializedName("subsection")
+    @Expose
+    private String subsection;
     @SerializedName("title")
     @Expose
     private String title;
@@ -97,6 +100,11 @@ public class ArticleSport implements Serializable {
         this.multimedia = multimedia;
     }
 
+    public String getSubsection() {
+        return subsection;
+    }
 
-
+    public void setSubsection(String subsection) {
+        this.subsection = subsection;
+    }
 }

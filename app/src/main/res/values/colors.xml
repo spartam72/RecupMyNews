@@ -9,11 +9,11 @@
     <color name="colorStatusBarHome">#CF9E20</color>
     <color name="colorStatusBarMostPopular">#4076A3</color>
     <color name="colorStatusBarSport">#007100</color>
-    <color name="colorStatusBarBusiness">#7D7D7B</color>
+    <color name="colorStatusBarBusiness">#575754</color>
     <color name="colorStatusBarDetailTS">#CF9E20</color>
     <color name="colorStatusBarDetailsMP">#4076A3</color>
     <color name="colorStatusBarDetailsSPT">#007100</color>
-    <color name="colorStatusBarDetailsBU">#7D7D7B</color>
+    <color name="colorStatusBarDetailsBU">#575754</color>
     <color name="colorTabIndicator">#FF0000</color>
     <color name="colorIconNavigation">#800000</color>
 

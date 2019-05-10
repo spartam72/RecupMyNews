@@ -2,8 +2,10 @@ package com.example.spart.recupmynews.Controller;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -47,6 +49,7 @@ public class SearchResultActivity extends AppCompatActivity {
 
     private SharedPreferences mPreferences;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +80,7 @@ public class SearchResultActivity extends AppCompatActivity {
         this.recyclerView.setLayoutManager(new LinearLayoutManager(getApplication()));
     }
     private void configureOnClickRecyclerView() {
-        ItemClickSupport.addTo(recyclerView, R.layout.article_item_search )
+        ItemClickSupport.addTo(recyclerView, R.layout.article_item_search_modif_subsection )
                 .setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
                     @Override
                     public void onItemClicked(RecyclerView recyclerView, int position, View v) {

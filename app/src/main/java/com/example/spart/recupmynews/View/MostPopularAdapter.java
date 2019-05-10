@@ -61,7 +61,7 @@ public class MostPopularAdapter extends RecyclerView.Adapter<MostPopularAdapter.
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final View itemView = LayoutInflater.from(parent.getContext())
-                .inflate( R.layout.article_item_categories_modif,parent, false);
+                .inflate( R.layout.article_item_categories_modif_sub_section,parent, false);
 
 
         return new MyViewHolder(itemView);
@@ -72,9 +72,13 @@ public class MostPopularAdapter extends RecyclerView.Adapter<MostPopularAdapter.
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
         holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorMostPopular ) );
-      //  holder.mPublishedDate.setTextColor(  ContextCompat.getColor(context,R.color.colorMostPopular ) );
 
-        holder.section.setText( results.get( position ).getSection() );
+        if(results.get( position ).getColumn()!= null) {
+            holder.section.setText( results.get( position ).getSection() + " > " + results.get( position ).getColumn() );
+        }else {
+            holder.section.setText( results.get( position ).getSection() + " > ");
+        }
+
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
         holder.mTitle.setText(results.get( position ).getTitle() );
         holder.mAbstractDesc.setText( results.get( position ).getAbstract() );

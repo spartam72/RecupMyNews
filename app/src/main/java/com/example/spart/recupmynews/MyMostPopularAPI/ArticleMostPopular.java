@@ -10,12 +10,18 @@ import java.util.List;
 
 public class ArticleMostPopular implements Serializable {
 
+    @SerializedName( "column" )
+    @Expose
+    private String column;
     @SerializedName("url")
     @Expose
     private String url;
     @SerializedName("section")
     @Expose
     private String section;
+    @SerializedName("subsection")
+    @Expose
+    private String subsection;
     @SerializedName("title")
     @Expose
     private String title;
@@ -90,4 +96,19 @@ public class ArticleMostPopular implements Serializable {
         this.media = media;
     }
 
+    public String getSubsection() {
+        return subsection;
+    }
+
+    public void setSubsection(String subsection) {
+        this.subsection = subsection;
+    }
+
+    public String getColumn() {
+        return column;
+    }
+
+    public void setColumn(String column) {
+        this.column = column;
+    }
 }

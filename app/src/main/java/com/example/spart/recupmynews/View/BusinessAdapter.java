@@ -45,6 +45,7 @@ public class BusinessAdapter extends RecyclerView.Adapter<BusinessAdapter.MyView
         private final CardView articleItemWindow;
 
 
+
         MyViewHolder(View view) {
             super(view);
 
@@ -62,7 +63,7 @@ public class BusinessAdapter extends RecyclerView.Adapter<BusinessAdapter.MyView
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final View itemView = LayoutInflater.from(parent.getContext())
-                .inflate( R.layout.article_item_categories_modif,parent, false);
+                .inflate( R.layout.article_item_categories_modif_sub_section,parent, false);
 
 
         return new MyViewHolder(itemView);
@@ -73,9 +74,12 @@ public class BusinessAdapter extends RecyclerView.Adapter<BusinessAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
         holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorStatusBarBusiness ) );
-      //  holder.mPublishedDate.setTextColor(  ContextCompat.getColor(context,R.color.colorBusiness ) );
 
-        holder.section.setText( results.get( position ).getSection() );
+        if(results.get( position ).getSubsection()!=null) {
+            holder.section.setText( results.get( position ).getSection() + " > " + results.get( position ).getSubsection() );
+        }else {
+            holder.section.setText( results.get( position ).getSection() + " > ");
+        }
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
         holder.mTitle.setText(results.get( position ).getTitle() );
         holder.mAbstractDesc.setText( results.get( position ).get_abstract() );
