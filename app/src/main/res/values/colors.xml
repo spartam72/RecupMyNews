@@ -2,22 +2,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <color name="colorTopStories">#DAA520</color>
-    <color name="colorMostPopular">#C41E3A</color>
+    <color name="colorMostPopular">#4682B4</color>
     <color name="colorSport">#008000</color>
-    <color name="colorBusiness">#4682B4</color>
+    <color name="colorBusiness">#848482</color>
 
     <color name="colorStatusBarHome">#CF9E20</color>
-    <color name="colorStatusBarMostPopular">#AF1B2F</color>
+    <color name="colorStatusBarMostPopular">#4076A3</color>
     <color name="colorStatusBarSport">#007100</color>
-    <color name="colorStatusBarBusiness">#4076A3</color>
-    <color name="colorStatusBarDetailTS">#CF9E20</color>
-    <color name="colorStatusBarDetailsMP">#AF1B2F</color>
-    <color name="colorStatusBarDetailsSPT">#007100</color>
-    <color name="colorStatusBarDetailsBU">#4076A3</color>
+    <color name="colorStatusBarBusiness">#787876</color>
 
     <color name="colorTabIndicator">#FF0000</color>
     <color name="colorIconNavigation">#800000</color>
-
 
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>

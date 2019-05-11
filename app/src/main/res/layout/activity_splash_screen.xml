@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorTopStories"
+    android:background="@color/colorStatusBarHome"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -15,48 +15,54 @@
     <!--    Zone pour l affichage de l image d accueil  -->
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="363dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="www.mynews.com"
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="41dp"
+        android:fontFamily="@font/baumans"
+        android:gravity="center_horizontal"
+        android:text="are here..."
         android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
 
     <TextView
-        android:id="@+id/tv_titre"
-        android:layout_width="409dp"
-        android:layout_height="99dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:text="Be informed wherever you are !"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_hanging"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/baumans"
+        android:gravity="center_horizontal"
+        android:text="Don't miss them !"
         android:textColor="@color/colorBlack"
-        android:textSize="27sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="363dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/iv_hanging"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/baumans"
+        android:gravity="center"
+        android:text="All breaking news"
+        android:textColor="@color/colorBlack"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/iv_hanging"
-        android:layout_width="378dp"
-        android:layout_height="572dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="283dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="218dp"
         android:padding="15dp"
-        android:src="@drawable/news_gif"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        android:src="@drawable/breaking_news_red" />
 
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

@@ -73,7 +73,7 @@ public class BusinessAdapter extends RecyclerView.Adapter<BusinessAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
-        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorBusiness ) );
+        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorStatusBarBusiness ) );
 
         if(results.get( position ).getSubsection()!=null) {
             holder.section.setText( results.get( position ).getSection() + " > " + results.get( position ).getSubsection() );

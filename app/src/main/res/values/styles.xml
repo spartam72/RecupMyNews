@@ -22,23 +22,10 @@
         <item name="colorAccent">@color/colorXanadu</item>
     </style>
 
-    <!-- MyNews Theme -->
-    <style name="MyNewsTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorXanadu</item>
-        <item name="colorAccent">@color/colorXanadu</item>
-    </style>
 
     <!-- Toolbar theme. -->
-    <style name="ToolBarStyle" parent="NavigationDrawer.Theme">
-        <item name="colorControlNormal">@color/colorWhite</item>
-    </style>
-
     <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:fontFamily">@font/bigshot_one</item>
-    </style>
-
-    <style name="ToolbarThemeMainActivity" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:fontFamily">@font/telex</item>
+        <item name="android:fontFamily">@font/baumans</item>
     </style>
 
     <style name="SwitchCompatTheme" >

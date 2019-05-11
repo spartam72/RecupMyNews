@@ -101,6 +101,9 @@
     <string name="mynews">MyNews</string>
     <string name="todo1">TODO1</string>
     <string name="screen">splash</string>
+    <string name="logo">logo_</string>
+    <string name="my_news_application_for_android_brings_the_award_winning_journalism_of_the_new_york_times_to_your_android_device_the_app_has_been_specifically_designed_for_browsing_and_navigating_articles_features_and_video_on_the_android_platform_get_it_for_free_from_the_google_play_store_and_start_enjoying_my_news_on_your_android_smartphone_and_tablet">My News application for Android brings the award-winning journalism of The New York Times to your Android device. The app has been specifically designed for browsing and navigating articles, features and video on the Android platform. Get it for free from the Google Play Store and start enjoying My News on your Android smartphone and tablet.</string>
+    <string name="on_google_playstore_since_february_2019">On Google Playstore since February 2019</string>
 
 
 </resources>

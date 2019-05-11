@@ -1,7 +1,9 @@
 package com.example.spart.recupmynews.Controller;
 
 import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,6 +18,7 @@ import java.util.Objects;
 
 public class DetailActivitySports extends AppCompatActivity {
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +30,7 @@ public class DetailActivitySports extends AppCompatActivity {
         Objects.requireNonNull( getSupportActionBar() ).setTitle( "Details from Sports Article" );
         toolbar.setBackgroundColor( getResources().getColor( R.color.colorSport ) );
         getSupportActionBar().setDisplayHomeAsUpEnabled( true );
-        getWindow().setStatusBarColor( ContextCompat.getColor(this, R.color.colorStatusBarDetailsSPT ));
+        getWindow().setStatusBarColor( ContextCompat.getColor(this, R.color.colorStatusBarSport ));
 
         WebView webViewDetail = findViewById( R.id.webViewDescription );
         ArticleSport result = (ArticleSport) Objects.requireNonNull( getIntent().getExtras() ).getSerializable( "result" );

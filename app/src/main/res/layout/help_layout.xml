@@ -28,7 +28,7 @@
         android:paddingLeft="10dp"
         android:paddingTop="5dp"
         android:paddingRight="10dp"
-        android:text="My News application for Android brings the award-winning journalism of The New York Times to your Android device. The app has been specifically designed for browsing and navigating articles, features and video on the Android platform. Get it for free from the Google Play Store and start enjoying My News on your Android smartphone and tablet."
+        android:text="@string/my_news_application_for_android_brings_the_award_winning_journalism_of_the_new_york_times_to_your_android_device_the_app_has_been_specifically_designed_for_browsing_and_navigating_articles_features_and_video_on_the_android_platform_get_it_for_free_from_the_google_play_store_and_start_enjoying_my_news_on_your_android_smartphone_and_tablet"
         android:textColor="@color/colorBlack"
         android:textSize="14sp" />
 
@@ -40,15 +40,9 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="408dp"
-                android:layout_weight="1"
-                android:orientation="vertical"/>
 
             <ImageView
                 android:id="@+id/imageView"
@@ -56,7 +50,19 @@
                 android:layout_height="166dp"
                 android:layout_weight="1"
                 android:padding="15dp"
-                app:srcCompat="@drawable/news_gif" />
+                app:srcCompat="@drawable/globe_news" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp"
+                tools:ignore="NestedWeights">
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
