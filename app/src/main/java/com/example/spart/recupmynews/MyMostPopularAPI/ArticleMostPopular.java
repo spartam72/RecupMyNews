@@ -37,6 +37,12 @@ public class ArticleMostPopular implements Serializable {
     @SerializedName("media")
     @Expose
     private List<Medium> media = null;
+    @SerializedName( "nytdsection" )
+    @Expose
+    private String nytdsection;
+    @SerializedName("des_facet")
+    @Expose
+    private List<String> desFacet = null;
 
     public String getUrl() {
         return url;
@@ -110,5 +116,19 @@ public class ArticleMostPopular implements Serializable {
 
     public void setColumn(String column) {
         this.column = column;
+    }
+    public String getNytdsection() {
+        return nytdsection;
+    }
+
+    public void setNytdsection(String nytdsection) {
+        this.nytdsection = nytdsection;
+    }
+    public List<String> getDesFacet() {
+        return desFacet;
+    }
+
+    public void setDesFacet(List<String> desFacet) {
+        this.desFacet = desFacet;
     }
 }

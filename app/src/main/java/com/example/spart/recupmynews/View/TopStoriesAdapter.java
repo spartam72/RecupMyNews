@@ -76,8 +76,9 @@ public class TopStoriesAdapter extends RecyclerView.Adapter<TopStoriesAdapter.My
         if(results.get( position ).getSubsection()!=null) {
             holder.section.setText( results.get( position ).getSection() + " > " + results.get( position ).getSubsection() );
         }else {
-            holder.section.setText( results.get( position ).getSection() + " > ");
+            holder.section.setText( results.get( position ).getSection() + " > " );
         }
+
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
         holder.mTitle.setText(results.get( position ).getTitle() );
         holder.mAbstractDesc.setText( results.get( position ).get_abstract());

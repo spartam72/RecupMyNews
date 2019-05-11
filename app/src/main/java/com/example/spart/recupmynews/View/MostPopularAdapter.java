@@ -74,10 +74,11 @@ public class MostPopularAdapter extends RecyclerView.Adapter<MostPopularAdapter.
         holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorMostPopular ) );
 
         if(results.get( position ).getColumn()!= null) {
-            holder.section.setText( results.get( position ).getSection() + " > " + results.get( position ).getColumn() );
+            holder.section.setText( results.get( position ).getSection() + " > " + results.get( position ).getColumn());
         }else {
-            holder.section.setText( results.get( position ).getSection() + " > ");
+            holder.section.setText( results.get( position ).getSection() + " > " );
         }
+
 
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
         holder.mTitle.setText(results.get( position ).getTitle() );

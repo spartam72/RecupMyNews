@@ -73,13 +73,14 @@ public class BusinessAdapter extends RecyclerView.Adapter<BusinessAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
-        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorStatusBarBusiness ) );
+        holder.section.setTextColor( ContextCompat.getColor(context,R.color.colorBusiness ) );
 
         if(results.get( position ).getSubsection()!=null) {
             holder.section.setText( results.get( position ).getSection() + " > " + results.get( position ).getSubsection() );
         }else {
             holder.section.setText( results.get( position ).getSection() + " > ");
         }
+
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
         holder.mTitle.setText(results.get( position ).getTitle() );
         holder.mAbstractDesc.setText( results.get( position ).get_abstract() );

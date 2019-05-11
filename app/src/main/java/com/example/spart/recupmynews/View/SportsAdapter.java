@@ -77,6 +77,7 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.MyViewHold
         }else {
             holder.section.setText( results.get( position ).getSection() + " > ");
         }
+
         holder.mPublishedDate.setText( DateConvertUtils.getPublished_date_converted(results.get( position ).getPublishedDate() ));
         holder.mTitle.setText(results.get( position ).getTitle() );
         holder.mAbstractDesc.setText( results.get( position ).get_abstract());

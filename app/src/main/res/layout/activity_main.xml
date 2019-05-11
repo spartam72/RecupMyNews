@@ -29,9 +29,9 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorTopStories"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@color/colorTabIndicator"
+            app:tabIndicatorColor="@color/colorBlack"
             app:tabMode="fixed"
-            app:tabSelectedTextColor="@color/colorWhite"
+            app:tabSelectedTextColor="@color/colorBlack"
             app:tabTextColor="@android:color/background_light">
 
         </android.support.design.widget.TabLayout>

@@ -37,6 +37,7 @@ public class ArticleTopStories implements Serializable {
     @Expose
     private List<MediaMetadatum> multimedia = null;
 
+
     public String getSection() {
         return section;
     }
@@ -108,4 +109,5 @@ public class ArticleTopStories implements Serializable {
     public void setSubsection(String subsection) {
         this.subsection = subsection;
     }
+
 }
